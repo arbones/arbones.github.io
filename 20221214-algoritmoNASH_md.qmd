@@ -1,0 +1,550 @@
+---
+title: "Fibroscan&Biopsias"
+date: today
+date-format: long
+format:
+  markdown:
+    self-contained: true
+prefer-html: true    
+toc: true
+number-sections: true
+fig-align: "center"
+editor: visual
+execute: 
+  echo: false
+  warning: false
+editor_options:
+  chunk_output_type: console
+bibliography: references.bib
+---
+
+```{r}
+library(tidyverse)
+library(RSQLite)
+require(compareGroups)
+require(kableExtra)
+require(lubridate)
+library(skimr)
+library(cutpointr)
+options(scipen = 999)
+
+require(ggpubr)
+require(broom)
+# require(visreg)
+# require(splines)
+
+######## Fechas de IQ actualizadas de la base de datos FATe
+db=dbConnect(dbDriver("SQLite"),"~/Dropbox/SyncBriefcase/LAB/database/FATe")
+pac=dbReadTable(db,"pacientes") %>% 
+  select(muestra,DOS,edad,imc,sexo) %>% 
+  mutate(DOS=mdy(DOS))
+
+#################################################################################
+######################## DATOS FIBROSCAN ########################################
+#################################################################################
+
+##Exportación 25/11/2022##
+
+fs000<- read.csv("~/Dropbox/SyncBriefcase/LAB/IACS/Coleccion de grasa/2019-BariatricaHUMS/bbdd/20221125-EXPORTACION FIBROSCAN 25112022_mapi.csv",na.strings = c("NO","ERROR","","NULL","null","N/A")) %>% 
+  select(-PRE.ELASTOGRAFIA.HEPÁTICA)%>% 
+  relocate(Fecha.12m,.after = "Fibro.6m") %>% 
+  mutate(Fecha.pre.1=mdy(Fecha.pre.1),
+         FECHA.QX=mdy(FECHA.QX),
+         Fecha.2m=dmy(Fecha.2m),
+         Fecha.6.m=dmy(Fecha.6.m),
+         Fecha.12m=dmy(Fecha.12m),
+         Fecha.24.meses.real=dmy(Fecha.24.meses.real),
+         Fecha.36eses.real=dmy(Fecha.36eses.real))  %>% 
+  filter(ID.ADIPOFAT%in%pac$muestra)  #### se seleccionan solo los pacientes de la cohorte FATe
+
+
+
+
+  
+# f1=function(x){gsub("\\s*\\([^\\)]+\\)","",x)} ##### quita los parentesis y lo que hay dentro
+# fs0[,c(5:6,8:9)]=lapply(fs0[,c(5:6,8:9)],f1)
+
+# f2=function(x){as.numeric(gsub(",","\\.", x))} ##### cambia las comas decimales por puntos
+# fs0[,c(5:6,8:9)]=lapply(fs0[,c(5:6,8:9)],f2)
+  
+
+
+nam=c("ADIPOFAT","NHS","NTS","fecha","CAP","fibroscan","IQX")
+fs.pre=fs000[,c(1:3,4:7)] %>% rename_with(~nam)
+fs.2=fs000[,c(1:3,8:10,7)] %>% rename_with(~nam)
+fs.6=fs000[,c(1:3,11:13,7)] %>% rename_with(~nam)
+fs.12=fs000[,c(1:3,14:16,7)] %>% rename_with(~nam)
+fs.24=fs000[,c(1:3,17:19,7)] %>% rename_with(~nam)
+
+# fs0=data.frame(mapply(c,fs.pre,fs.2,fs.6,fs.12,fs.24)) #### deberia concatenar las tablas similar a rbind
+# names(fs0)=c("ADIPOFAT","NHS","NTS","fecha","peso","CAP","fibroscan","IQX")
+
+
+fs00=bind_rows(fs.pre,fs.2,fs.6,fs.12,fs.24)
+
+
+
+
+
+fs0=fs.pre %>% 
+  select(ADIPOFAT,CAP,fibroscan) %>% 
+  rename(CAP0="CAP",fibroscan0="fibroscan") %>% 
+  inner_join(fs00,by="ADIPOFAT") %>% 
+  inner_join(pac,by=c("ADIPOFAT"="muestra"))### para la fecha de IQ utiliza las fechas de la bbdd FATe
+
+### %>% mutate(IQX2=if_else(is.na(IQX),DOS,IQX))#### utiliza la fecha de IQ de FATe si no hay fecha en la bbdd de fibroscan
+  
+
+fs=fs0 %>% 
+  filter(!is.na(CAP) & !is.na(fibroscan)) %>% ### quita los que no tienen medidas
+  #filter(!is.na(CAP0) & !is.na(fibroscan0)) %>% ## quita los que no tienen medidas PRE
+  filter(!is.na(fecha)) %>% ### añdir las fechas que faltan
+  mutate(int=interval(start=DOS,end=fecha)/duration("monts")) %>% 
+  mutate(cap.reduction=(CAP)/CAP0*100) %>% 
+  mutate(fibroscan.reduction=(fibroscan)/fibroscan0*100) %>% 
+  ## se categorizan los meses de seguimiento y se transforma en caracter para que nos salgan cosas raras en los ifelses posteriores
+  mutate(int.cat=cut(int,c(-Inf,.1,4,10,18,Inf),labels = c("PreIQ","3mo-postIQ","6mo-postIQ","1y-postIQ","2y-postIQ")) %>% as.character(), 
+         int.cat=ifelse(is.na(DOS)&!is.na(fibroscan0),"PreIQ",int.cat),## considera pre-IQ las medidas de los pacientes que todvía no tienen IQ
+         int.cat=ifelse(int.cat=="PreIQ" & fibroscan.reduction!=100,NA,int.cat),
+         int.cat=factor(int.cat,levels = c("PreIQ","3mo-postIQ","6mo-postIQ","1y-postIQ","2y-postIQ"))) %>% 
+  mutate(fibroscan.reduction=na_if(fibroscan.reduction,fibroscan.reduction>400))####transforma en NA valores atipicos de fibroscan.reduction
+  
+
+
+#################################################################################
+######################## BIOPSIAS AP ########################################
+#################################################################################
+
+ap0 <- read.csv("~/Dropbox/SyncBriefcase/LAB/IACS/Coleccion de grasa/2019-BariatricaHUMS/AnatomiaPatologica/20221130-ValoracionHigadoAP_resisDigestivo_JM.csv",
+                na.strings = "")
+
+ap=ap0 %>% 
+  filter(!is.na(nas))
+
+#################################################################################
+######################## BIOQUÍMICA  ########################################
+#################################################################################
+
+bq0=dbReadTable(db,"BQ") %>% 
+  select(muestra,GOT,GPT)
+
+hem0=dbReadTable(db,"hemato2") %>% 
+  select(muestra,PLT)
+
+
+bq=bq0 %>% 
+  inner_join(hem0,by="muestra") %>% 
+  add_row(muestra=343, GOT=48, GPT=64, PLT=192)### se añaden datos de BQ porque no hay PES
+
+
+
+
+
+###############################################################################
+
+
+pre00 = fs.pre %>% 
+  left_join(pac, by=c("ADIPOFAT"="muestra")) %>% 
+  mutate(IQ=ifelse(is.na(DOS),"No IQ","Si IQ") %>% as.factor(),
+         fibroscanPre=ifelse(is.na(fibroscan),"No fibroscan","Si fibroscan") %>% as.factor())
+  
+
+### pacientes con fibroscan y biopsia
+ pre0= pre00%>% 
+   inner_join(ap,by=c("ADIPOFAT"="muestra")) %>% 
+   left_join(bq,by=c("ADIPOFAT"="muestra")) %>% 
+  filter(fibroscanPre=="Si fibroscan")
+ 
+ 
+ pre=pre0 %>% 
+   ######## se añaden paceintes de Vanesa (no FATe)
+   add_row(NHS=1172033,edad=61,imc=30,sexo="mujer",fibroscan=10.9,fibrosis="4",GOT=32,GPT=28,PLT=179) %>% 
+   add_row(NHS=1010676,edad=61,imc=35,sexo="hombre",fibroscan=22.6,fibrosis="3",GOT=103,GPT=116,PLT=200) %>% 
+   
+   mutate(fibrosis=parse_number(fibrosis),
+          fibrosis_SiNo=ifelse(fibrosis==0,0,1) %>% as.factor()) %>% 
+   mutate(esteatosis_SiNo=ifelse(Esteatosis==0,0,1) %>% as.factor()) %>% 
+   mutate(fib.avanz=ifelse(fibrosis<=2,0,1) %>% as.factor()) %>% 
+   mutate(at.risk.nash=ifelse(nas>=4 & fibrosis>=2,1,0)) %>% 
+   mutate(fib4=(edad*GOT)/(PLT*sqrt(GPT)),
+          fib4.cat=ifelse(fib4>=1.30,">=1.30","<1.30"),###### categorias para la clasificación de EASL
+          lsm.cat=ifelse(fibroscan>=8,">=8","<8"))
+   
+  
+########################### limpia objetos del enviroment
+
+# rm(list=setdiff(ls(),c("pre","fs","ap","fs.pre","pac")))
+
+################################################################################# 
+
+fib34=prop.table(table(pre$fib.avanz))*100##### porcentaje de paceintes con fibrosis avanzada (grados 3-4 en biopsia)
+
+
+
+
+```
+
+-   Se han reclutado `r sum(between(pac$muestra,284,999))` desde 2019 para la cohorte FATe de los cuales `r sum(between(pac$muestra,284,999) &!is.na(pac$DOS))` se han sometido a cirugía. `r sum(!is.na(pre00$fibroscan))` pacientes tienen fibroscan pre-intervención.\
+-   Hay `r sum(!is.na(pre0$fibroscan))` pacientes con biopsia y fibroscan pre-intervención.
+-   Se añaden `r nrow(pre)-nrow(pre0)` nuevos pacientes con fibrosis avanzada. **No son FATe**
+
+```{mermaid}
+flowchart LR
+A[(Pacientes<br>FATe reclutados<br>desde el 2019<br>n=149)]
+B[Biopsias<br>n=129]
+C[(Pacientes<br>con Fibroscan<br>pre-IQ<br>n=108)]
+D[Pacientes<br>con biopsia y<br>fibroscan pre-IQ<br>n=97]
+E[Total incluidos<br>en el análisis<br>n=99]
+A-->B
+A-->C
+C-->D
+B-->D
+D-->|Pacientes<br>añadidos<br>n=2|E
+```
+
+-   Se añaden `r nrow(pre)-nrow(pre0)` nuevos pacientes con fibrosis avanzada. **No son FATe**. Solo se incluyen los datos de fibrosis, resultado biopsia, edad, IMC , sexo, GPT, GOT y plaquetas.
+
+# Biopsias recogidas durante la IQ
+
+## Caracteristicas de los pacientes en la cohorte de pacientes biopsiados
+
+La fibrosis hepática se evaluó de acuerdo con los criterios de NASH Clinical Research Network [@kleiner2005a]:\
+F0: sin fibrosis, F1: fibrosis perisinusoidal o portal/periportal, F2: fibrosis perisinusoidal y portal/periportal, F3: fibrosis en puente, y F4: cirrosis)
+
+```{r}
+tb=compareGroups(fib.avanz~edad+imc+CAP+fibroscan+nas+GOT+GPT+fib4,method = NA,pre)
+cb=createTable(tb,show.all = T)
+colnames(cb$descr)[c(2:3)]=c("F0-F2","F3-F4")
+export2md(cb,caption = "")
+```
+
+## Resultado biopsias
+
+::: panel-tabset
+### NAFLD Activity Score (NAS)
+
+```{r}
+
+ggplot(ap,aes(nas))+
+  geom_histogram(bins = 8,binwidth = 1,boundary=-0.5,col="white")+
+  scale_x_continuous("\nNAFLD Activity Score (NAS)",breaks = 0:8)+
+  labs(y="nº de biopsias\n")+
+  theme_minimal()+
+  theme(panel.grid.minor.x = element_blank(),
+        axis.title = element_text(size=18),
+        axis.text = element_text(size = 15))
+
+```
+
+### Fibrosis Stage
+
+```{r}
+ggplot(ap,aes(parse_number(fibrosis)))+
+  geom_histogram( bins = 4,binwidth = 1,boundary=-0.5,col="white")+
+  scale_x_continuous("\nFibrosis Stage",breaks = 0:4)+
+  labs(y="nº de biopsias\n")+
+  theme_minimal()+
+  theme(panel.grid.minor.x = element_blank(),
+        axis.title = element_text(size=18),
+        axis.text = element_text(size = 15))
+```
+
+### Esteatosis
+
+```{r}
+ggplot(ap,aes(Esteatosis))+
+  geom_histogram(bins = 4,binwidth = 1,boundary=-0.5,col="white")+
+  scale_x_continuous("\nSteatosis",breaks = 0:3)+
+  labs(y="nº de biopsias\n")+
+  theme_minimal()+
+  theme(panel.grid.minor.x = element_blank(),
+        axis.title = element_text(size=18),
+        axis.text = element_text(size = 15))
+```
+:::
+
+Hay un `r round(fib34[2],0)`% de pacientes con fibrosis avanzada (grados 3-4 en la biopsia)
+
+# Correlaciones
+
+## Correlación Biopsia \<\> Fibroscan
+
+```{r}
+#| fig.width=5
+
+ggplot(pre,aes(x=fibrosis,y=fibroscan))+
+  geom_point(size=2,alpha=0.4)+
+  geom_smooth(method = "lm",se=F)+
+  stat_cor(size=5, label.x = 1, label.y = 40)+
+  labs(x="Fibrosis (Biopsia)",y="Fibroscan pre-IQ\n")+
+  theme_minimal()+
+  theme(axis.text = element_text(size=11),
+        axis.title = element_text(size=13))
+```
+
+```{r}
+#| fig.width=5
+
+ggplot(pre,aes(x=Esteatosis,y=CAP))+
+  geom_point(size=2,alpha=0.4)+
+  geom_smooth(method = "lm",se=F)+
+  stat_cor(size=5, label.x = 1.2, label.y = 230)+
+  labs(x="Estaeatosis (Biopsia)",y="CAP pre-IQ\n")+
+  theme_minimal()+
+  theme(axis.text = element_text(size=11),
+        axis.title = element_text(size=13))
+```
+
+## Correlación Biopsia \<\> FIB4
+
+```{r}
+#| fig.width=5
+
+ggplot(pre,aes(x=fibrosis,y=fib4))+
+  geom_point(size=2,alpha=0.4)+
+  geom_smooth(method = "lm",se=F)+
+  stat_cor(size=5, label.x = 1, label.y = 3)+
+  labs(x="Fibrosis (Biopsia)",y="FIB4 pre-IQ\n")+
+  theme_minimal()+
+  theme(axis.text = element_text(size=11),
+        axis.title = element_text(size=13))
+```
+
+## Correlación Fibroscan \<\> FIB4
+
+```{r}
+#| fig.width=5
+
+ggplot(pre,aes(x=fibroscan,y=fib4))+
+  geom_point(size=2,alpha=0.4)+
+  scale_x_continuous(limits = c(0,50))+
+  geom_smooth(method = "lm",se=F)+
+  stat_cor(size=5, label.x = 30, label.y = 3)+
+  labs(x="Fibroscan (kPa)",y="FIB4 pre-IQ\n")+
+  theme_minimal()+
+  theme(axis.text = element_text(size=11),
+        axis.title = element_text(size=13))
+```
+
+Se quita un valor de fibrosis (`r max(pre$fibroscan,na.rm=T)`) \>\>\>outlier???
+
+# Predicción fibrosis avanzada
+
+## Toda la cohorte
+
+### Fibrosis con fibroscan
+
+**Gold standard**: Detección de fibrosis en biopsia (Fibrosis ≠ 0).\
+El punto de corte se calcula a partir del indice de Youden (J) maximizando la sensibilidad y la especificidad ($J = Sensibilidad + Especificidad − 1$)
+
+```{r}
+# An introduction to cutpointr
+# https://cran.r-project.org/web/packages/cutpointr/vignettes/cutpointr.html 
+
+cp=pre %>% 
+  cutpointr(fibroscan,fibrosis_SiNo, na.rm=T,
+            method = maximize_metric,
+            metric=youden)
+s=summary(cp)[[7]][[1]][2:5]
+cp %>% 
+ select(optimal_cutpoint,acc:AUC) %>% 
+  kbl(digits = 2) %>% 
+  kable_styling("striped")
+
+```
+
+### Fibrosis **avanzada** con fibroscan
+
+**Gold standard**: Detección de fibrosis en biopsia (F3-F4).\
+El punto de corte se calcula a partir del indice de Youden (J) maximizando la sensibilidad y la especificidad ($J = Sensibilidad + Especificidad − 1$)
+
+```{r}
+
+cpf=pre %>% 
+  cutpointr(fibroscan,fib.avanz, na.rm=T,
+            method = maximize_metric,
+            metric=youden)
+
+cpf %>% 
+ select(optimal_cutpoint,acc:AUC) %>% 
+  kbl(digits = 2) %>% 
+  kable_styling("striped")
+
+  
+```
+
+### Fibrosis **avanzada** con FIB4
+
+**Gold standard**: Detección de fibrosis en biopsia (F3-F4).\
+El punto de corte se calcula a partir del indice de Youden (J) maximizando la sensibilidad y la especificidad ($J = Sensibilidad + Especificidad − 1$)
+
+```{r}
+
+cp4=pre %>% 
+  cutpointr(fib4,fib.avanz, na.rm=T,
+            method = maximize_metric,
+            metric=youden)
+
+cp4 %>% 
+ select(optimal_cutpoint,acc:AUC) %>% 
+  kbl(digits = 2) %>% 
+  kable_styling("striped")
+
+  
+```
+
+## Modelo secuencial EASL
+
+To enable the detection of advanced liver fibrosis in patients with NAFLD in the primary care setting or in diabetology clinics, the EASL has proposed a three-tiered approach for the use of NITs [@berzigotti2021],[@canivet2022]
+
+![Algoritmo EASL](images/easl.png){fig-align="center"}
+
+```{r}
+n1=compareGroups(fib4.cat~fib4+CAP+fibroscan+nas+Esteatosis+balonizacion+inflamacion+fibrosis+fibrosis_SiNo+fib.avanz+at.risk.nash,method = NA,pre)
+nt=createTable(n1,hide.no = "0")
+export2md(nt,caption = "Clasificación de los pacientes segun el FIB4")
+```
+
+#### Representación grafica de las categorías de FIB4 y liver stiffness measurement (fibroscan) {.unnumbered}
+
+```{r}
+pre.fib=pre %>% 
+  filter(!is.na(fib4.cat))
+
+vtree::vtree(pre.fib,"fib4.cat lsm.cat fib.avanz")
+```
+
+#### Metricas de diagnóstico de fibrosis avanzada {.unnumbered}
+
+```{r}
+cp3=pre %>%
+  filter(fib4.cat==">=1.30") %>%
+  cutpointr(fibroscan,fib.avanz, na.rm=T,
+            method = maximize_metric,
+            metric=youden)
+
+cp3 %>% 
+ select(optimal_cutpoint,acc:AUC) %>% 
+  kbl(digits = 2) %>% 
+  kable_styling("striped")
+
+
+
+plot(cp3)
+```
+
+# Predicción de "at-risk NASH [@stern2022]
+
+At-risk NASH (or fibrotic NASH) is defined by the presence of NASH (NAFLD activity score ≥4 with 1 item of each at least) and significant fibrosis (fibrosis stage ≥2) [@sanyal2015]
+
+## Toda la cohorte
+
+### Fibroscan
+
+```{r}
+# An introduction to cutpointr
+# https://cran.r-project.org/web/packages/cutpointr/vignettes/cutpointr.html 
+
+cp5=pre %>% 
+  cutpointr(fibroscan,at.risk.nash, na.rm=T,
+            method = maximize_metric,
+            metric=youden)
+s=summary(cp5)[[7]][[1]][2:5]
+cp5 %>% 
+ select(optimal_cutpoint,acc:AUC) %>% 
+  kbl(digits = 2) %>% 
+  kable_styling("striped")
+
+```
+
+### FIB4
+
+```{r}
+
+cp6=pre %>% 
+  cutpointr(fib4,at.risk.nash, na.rm=T,
+            method = maximize_metric,
+            metric=youden)
+
+cp6 %>% 
+ select(optimal_cutpoint,acc:AUC) %>% 
+  kbl(digits = 2) %>% 
+  kable_styling("striped")
+
+  
+```
+
+## Modelo secuencial EASL
+
+### Clasificación usando FIB\>1.3 (EASL-2021)
+
+```{r}
+preR=pre %>% 
+  mutate(fib4.cat2=ifelse(fib4>cp6$optimal_cutpoint,1,0)) %>% 
+  filter(!is.na(fib4))
+
+vtree::vtree(preR,"fib4.cat lsm.cat at.risk.nash")
+```
+
+**Cutoff de fibrosis en el subgrupo FIB4\>=1.30**
+
+```{r}
+cp3=pre %>%
+  filter(fib4.cat==">=1.30") %>%
+  cutpointr(fibroscan,at.risk.nash, na.rm=T,
+            method = maximize_metric,
+            metric=youden)
+
+cp3 %>% 
+ select(optimal_cutpoint,acc:AUC) %>% 
+  kbl(digits = 2) %>% 
+  kable_styling("striped")
+
+
+
+plot(cp3)
+```
+
+### Clasificación con los nuevos puntos de corte
+
+#### FIB4\> `r round(cp6$optimal_cutpoint,2)`, LSM\>=8 (EASL-2021)
+
+```{r}
+vtree::vtree(preR,"fib4.cat2 lsm.cat at.risk.nash")
+
+```
+
+```{r}
+n1=compareGroups(fib4.cat2~fib4+CAP+fibroscan+nas+Esteatosis+balonizacion+inflamacion+fibrosis+fibrosis_SiNo+fib.avanz+at.risk.nash,method = NA,preR)
+nt=createTable(n1,hide.no = "0")
+colnames(nt$descr)[1:2]=c(paste("<",round(cp6$optimal_cutpoint,2)),paste(">=",round(cp6$optimal_cutpoint,2)))
+export2md(nt,caption = "")
+```
+
+```{r}
+cp7=preR %>%
+  filter(fib4.cat2==1) %>%
+  cutpointr(fibroscan,at.risk.nash, na.rm=T,
+            method = maximize_metric,
+            metric=youden)
+
+cp7 %>% 
+ select(optimal_cutpoint,acc:AUC) %>% 
+  kbl(digits = 2) %>% 
+  kable_styling("striped")
+
+
+
+plot(cp3)
+```
+
+#### FIB4\> `r round(cp6$optimal_cutpoint,2)`, LSM\>= `r round(cp7$optimal_cutpoint,2)` kPa
+
+```{r}
+preRR=preR %>% 
+  mutate(lsm.cat2=ifelse(fibroscan>cp5$optimal_cutpoint,1,0))
+         
+vtree::vtree(preRR,"fib4.cat2 lsm.cat2 at.risk.nash")         
+```
+
+# BIBLIOGRAFIA
