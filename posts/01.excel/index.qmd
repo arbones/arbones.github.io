@@ -1,0 +1,60 @@
+---
+title: "The Excel-pocalypse"
+subtitle: "Where Good Research Goes to Die in a Spreadsheet"
+layout: post
+date: today
+author: "JM"
+image: "thumbnail.png"
+categories: [excel,data-wrangling, ]
+---
+
+Spreadsheets are seductive. They look simple, friendly, and universal. Every lab has someone who swears by Excel. But history has shown again and again: when important science is entrusted to a spreadsheet, disaster is never far away.
+
+
+## Copy-Paste Catastrophes
+
+Spreadsheets don’t come with version control. In one economics study, copy-pasted formulas led to the exclusion of entire rows of countries. The result was the infamous Reinhart & Rogoff paper that claimed high debt stifled economic growth, a conclusion later shown to hinge on **Excel formula errors**. That single spreadsheet mistake shaped years of austerity policy.
+
+## The Silent Assassin: Hidden Sorts and Filters
+
+Countless researchers have discovered too late that sorting a single column without including the rest of the dataset destroys data integrity. One mis-click, and patient IDs no longer match blood samples, timepoints, or genotypes. The danger is compounded because Excel rarely warns you. Instead, it happily reorders cells, leaving your dataset looking fine but fatally scrambled.
+
+## The Fragility of a Single Cell
+
+Unlike databases, spreadsheets don’t enforce data types, relationships, or consistency. A stray keystroke, an overwritten formula, or a decimal separator flipped from “,” to “.” can alter results with no trace left behind. Worse, once the error propagates through linked sheets, nobody can reconstruct what the “true” numbers were. 
+
+
+## Has already happened
+
+The Excel-pocalypse isn’t coming. It already happened. And it will keep happening until researchers stop mistaking a consumer office tool for a scientific data platform.
+
+
+
+### Gene Symbols vs. Calendar Dominance
+
+Imagine you name a gene *SEPT2* (Septin-2). Or *MARCH1*. Breathless lab techs think they wrote science. But Excel thinks it’s September 2. Or March 1. Silent autoconversion. By the time anyone notices, databases have been invaded by dates. A 2016 study found **about 20% of genomics papers** with supplementary Excel gene lists have such errors. ([BioMed Central][1])
+
+Ten years later: worse. A 2021 follow-up showed that gene name errors have *increased*, affecting \~30.9% of papers with Excel gene lists in a sample from 2014-2020. ([PLOS][2])
+
+---
+
+### The Great Covid Spreadsheet Slip
+
+Picture this: Public Health England (PHE) is collecting COVID-19 positive test results from many labs. Some send huge CSVs. Then, someone opens them in Excel, using or converting to old “.xls” format. That format can only hold \~65,536 rows. Any excess? Deleted from view. Just… gone.
+
+Thousands of positive tests (15,841, in fact) were **not included in official figures** during a period in 2020. Tracing people who should have been told to isolate? Delayed. Infection chains kept growing. ([The Guardian][3])
+
+---
+
+## The Broader Lesson
+
+Excel has its place: small tables, quick summaries, maybe a plot for a presentation. But for storing raw research data or doing serious analysis, it is a loaded gun pointed at your results. Databases, R, Python, and specialized bioinformatics tools exist for a reason.
+
+Every dataset that matters deserves version control, audit trails, reproducibility, and transparency. None of these live in Excel. And yet, in labs across the world, the fate of experiments, patients, and entire fields of knowledge continues to balance precariously on a spreadsheet.
+
+[1]: https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-1044-7?utm_source=chatgpt.com "Gene name errors are widespread in the scientific literature"
+[2]: https://journals.plos.org/ploscompbiol/article?id=10.1371%2Fjournal.pcbi.1008984&utm_source=chatgpt.com "Gene name errors: Lessons not learned - Research journals"
+[3]: https://www.theguardian.com/politics/2020/oct/05/how-excel-may-have-caused-loss-of-16000-covid-tests-in-england?utm_source=chatgpt.com "Covid: how Excel may have caused loss of 16000 test results in England | Health policy"
+
+
+
