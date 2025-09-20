@@ -3,14 +3,18 @@ project:
   output-dir: docs
 
 website:
-  title: "blog"
+  title: "Adipofat´s blog"
   navbar:
     right:
       - about.qmd
+      - text: main
+        href: https://arbones.github.io/adipo2/
       - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+        href: https://github.com/arbones?tab=repositories
+      - icon: youtube
+        href: https://www.youtube.com/user/AdipoFat
+  page-footer: 
+    left: "© 2025 JM Arbones-Mainar"
 format:
   html:
     theme:

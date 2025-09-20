@@ -4,7 +4,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this blog"
+    "text": "Welcome to my blog.\nI write in this blog about omics , spatial biology, and data science, sharing notes, tutorials, and reflections from my own work and learning. This space is both a personal log of what I am exploring and, hopefully, a resource you might find useful.\nThe goal is to learn by writing, and to make the process open. If you are curious about similar topics, I hope you’ll find something here that sparks ideas or helps you in your own projects.\nIf you want to know more about the broader scope of our research, I invite you to visit my lab’s main page. There you’ll find details about our projects, publications, and collaborations."
   },
   {
     "objectID": "posts/00.hello_world/index.html",
@@ -25,7 +25,7 @@
     "href": "posts/01.excel/index.html",
     "title": "The Excel-pocalypse",
     "section": "",
-    "text": "Spreadsheets are seductive. They look simple, friendly, and universal. Every lab has someone who swears by Excel. But history has shown again and again: when important science is entrusted to a spreadsheet, disaster is never far away."
+    "text": "Spreadsheets look simple, friendly, and universal. But history has shown again and again: when important science is entrusted to a spreadsheet, disaster is never far away."
   },
   {
     "objectID": "posts/01.excel/index.html#copy-paste-catastrophes",
