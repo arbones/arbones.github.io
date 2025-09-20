@@ -1,45 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Adipofat",
-    "section": "",
-    "text": "The Excel-pocalypse\n\n\nWhere Good Research Goes to Die in a Spreadsheet\n\n\n\nexcel\n\n\ndata-wrangling\n\n\n\n\n\n\n\n\n\nSep 20, 2025\n\n\nJM\n\n\n\n\n\n\n\n\n\n\n\n\nHello World…\n\n\n…from Omic Science!\n\n\n\nomics\n\n\nbioinformatics\n\n\nintroduction\n\n\n\n\n\n\n\n\n\nSep 18, 2025\n\n\nJM\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
     "text": "About this blog"
-  },
-  {
-    "objectID": "posts/hello_world/index.html",
-    "href": "posts/hello_world/index.html",
-    "title": "Hello World…",
-    "section": "",
-    "text": "Welcome to our GitHub Pages site dedicated to omic sciences! 🧬🔬\nThis space will serve as a hub for sharing insights, tutorials, and resources related to:\n\nGenomics - DNA sequencing and analysis\nTranscriptomics - RNA expression studies\n\nProteomics - Protein identification and quantification\nMetabolomics - Metabolic pathway analysis\nBioinformatics - Computational tools and pipelines\n\n\n\nIn upcoming posts, we’ll cover:\n\nBest practices for omic data analysis\nTutorials on common bioinformatics tools\nReproducible research workflows\nData visualization techniques\nLatest advancements in multi-omics integration"
-  },
-  {
-    "objectID": "posts/hello_world/index.html#what-to-expect",
-    "href": "posts/hello_world/index.html#what-to-expect",
-    "title": "Hello World…",
-    "section": "",
-    "text": "In upcoming posts, we’ll cover:\n\nBest practices for omic data analysis\nTutorials on common bioinformatics tools\nReproducible research workflows\nData visualization techniques\nLatest advancements in multi-omics integration"
   },
   {
     "objectID": "posts/00.hello_world/index.html",
@@ -67,7 +32,7 @@
     "href": "posts/01.excel/index.html#copy-paste-catastrophes",
     "title": "The Excel-pocalypse",
     "section": "Copy-Paste Catastrophes",
-    "text": "Copy-Paste Catastrophes\nSpreadsheets don’t come with version control. In one economics study, copy-pasted formulas led to the exclusion of entire rows of countries. The result was the infamous Reinhart & Rogoff paper that claimed high debt stifled economic growth—a conclusion later shown to hinge on Excel formula errors. That single spreadsheet mistake shaped years of austerity policy."
+    "text": "Copy-Paste Catastrophes\nSpreadsheets don’t come with version control. In one economics study, copy-pasted formulas led to the exclusion of entire rows of countries. The result was the infamous Reinhart & Rogoff paper that claimed high debt stifled economic growth, a conclusion later shown to hinge on Excel formula errors. That single spreadsheet mistake shaped years of austerity policy."
   },
   {
     "objectID": "posts/01.excel/index.html#the-silent-assassin-hidden-sorts-and-filters",
@@ -88,7 +53,7 @@
     "href": "posts/01.excel/index.html#has-already-happened",
     "title": "The Excel-pocalypse",
     "section": "Has already happened",
-    "text": "Has already happened\nThe Excel-pocalypse isn’t coming. It already happened. And it will keep happening until researchers stop mistaking a consumer office tool for a scientific data platform.\nHere’s a satirical cautionary tale “Excel-pocalypse” version, with stories and links.\n\nGene Symbols vs. Calendar Dominance\nImagine you name a gene SEPT2 (Septin-2). Or MARCH1. Breathless lab techs think they wrote science. But Excel thinks it’s September 2. Or March 1. Silent autoconversion. By the time anyone notices, databases have been invaded by dates. A 2016 study found about 20% of genomics papers with supplementary Excel gene lists have such errors. (BioMed Central)\nTen years later: worse. A 2021 follow-up showed that gene name errors have increased, affecting ~30.9% of papers with Excel gene lists in a sample from 2014-2020. (PLOS)\n\n\n\nThe Great Covid Spreadsheet Slip\nPicture this: Public Health England (PHE) is collecting COVID-19 positive test results from many labs. Some send huge CSVs. Then, someone opens them in Excel, using or converting to old “.xls” format. That format can only hold ~65,536 rows. Any excess? Deleted from view. Just… gone.\nThousands of positive tests (15,841, in fact) were not included in official figures during a period in 2020. Tracing people who should have been told to isolate? Delayed. Infection chains kept growing. (The Guardian)"
+    "text": "Has already happened\nThe Excel-pocalypse isn’t coming. It already happened. And it will keep happening until researchers stop mistaking a consumer office tool for a scientific data platform.\n\nGene Symbols vs. Calendar Dominance\nImagine you name a gene SEPT2 (Septin-2). Or MARCH1. Breathless lab techs think they wrote science. But Excel thinks it’s September 2. Or March 1. Silent autoconversion. By the time anyone notices, databases have been invaded by dates. A 2016 study found about 20% of genomics papers with supplementary Excel gene lists have such errors. (BioMed Central)\nTen years later: worse. A 2021 follow-up showed that gene name errors have increased, affecting ~30.9% of papers with Excel gene lists in a sample from 2014-2020. (PLOS)\n\n\n\nThe Great Covid Spreadsheet Slip\nPicture this: Public Health England (PHE) is collecting COVID-19 positive test results from many labs. Some send huge CSVs. Then, someone opens them in Excel, using or converting to old “.xls” format. That format can only hold ~65,536 rows. Any excess? Deleted from view. Just… gone.\nThousands of positive tests (15,841, in fact) were not included in official figures during a period in 2020. Tracing people who should have been told to isolate? Delayed. Infection chains kept growing. (The Guardian)"
   },
   {
     "objectID": "posts/01.excel/index.html#the-broader-lesson",
@@ -96,5 +61,12 @@
     "title": "The Excel-pocalypse",
     "section": "The Broader Lesson",
     "text": "The Broader Lesson\nExcel has its place: small tables, quick summaries, maybe a plot for a presentation. But for storing raw research data or doing serious analysis, it is a loaded gun pointed at your results. Databases, R, Python, and specialized bioinformatics tools exist for a reason.\nEvery dataset that matters deserves version control, audit trails, reproducibility, and transparency. None of these live in Excel. And yet, in labs across the world, the fate of experiments, patients, and entire fields of knowledge continues to balance precariously on a spreadsheet."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Adipofat",
+    "section": "",
+    "text": "The Excel-pocalypse\n\n\nWhere Good Research Goes to Die in a Spreadsheet\n\n\n\nexcel\n\n\ndata-wrangling\n\n\n\n\n\n\n\n\n\nSep 20, 2025\n\n\nJM\n\n\n\n\n\n\n\n\n\n\n\n\nHello World…\n\n\n…from Omic Science!\n\n\n\nomics\n\n\nbioinformatics\n\n\nintroduction\n\n\n\n\n\n\n\n\n\nSep 18, 2025\n\n\nJM\n\n\n\n\n\n\nNo matching items"
   }
 ]
