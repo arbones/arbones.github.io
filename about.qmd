@@ -13,10 +13,10 @@ about:
       href: https://github.com/arbones
 ---
 
-Welcome to my blog.  
 
-I write in this blog about **omics** , __spatial biology__, and **data science**, sharing notes, tutorials, and reflections from my own work and learning. This space is both a personal log of what I am exploring and, hopefully, a resource you might find useful.  
 
-The goal is to learn by writing, and to make the process open. If you are curious about similar topics, I hope you’ll find something here that sparks ideas or helps you in your own projects.  
+This blog explores the intersection of __omics__, __spatial biology__, and __data science__. Here I will share notes, tutorials, and reflections from my work, along with occasional digressions, documenting my learning process in the open.
 
-If you want to know more about the broader scope of our research, I invite you to visit my [lab’s main page](https://arbones.github.io/adipo2/). There you’ll find details about our projects, publications, and collaborations.  
+My goal is to create a practical resource for fellow researchers and students. I hope you find something that sparks an idea or helps solve a problem in your own projects.
+
+This blog is a component of my research. For a comprehensive overview of our lab's projects, publications, and collaborations, please visit our [lab’s main page](https://arbones.github.io/adipo2/). 

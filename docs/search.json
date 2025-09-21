@@ -4,7 +4,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Welcome to my blog.\nI write in this blog about omics , spatial biology, and data science, sharing notes, tutorials, and reflections from my own work and learning. This space is both a personal log of what I am exploring and, hopefully, a resource you might find useful.\nThe goal is to learn by writing, and to make the process open. If you are curious about similar topics, I hope you’ll find something here that sparks ideas or helps you in your own projects.\nIf you want to know more about the broader scope of our research, I invite you to visit my lab’s main page. There you’ll find details about our projects, publications, and collaborations."
+    "text": "This blog explores the intersection of omics, spatial biology, and data science. Here I will share notes, tutorials, and reflections from my work, along with occasional digressions, documenting my learning process in the open.\nMy goal is to create a practical resource for fellow researchers and students. I hope you find something that sparks an idea or helps solve a problem in your own projects.\nThis blog is a component of my research. For a comprehensive overview of our lab’s projects, publications, and collaborations, please visit our lab’s main page."
   },
   {
     "objectID": "posts/00.hello_world/index.html",
