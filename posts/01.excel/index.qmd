@@ -2,7 +2,7 @@
 title: "The Excel-pocalypse"
 subtitle: "Where Good Research Goes to Die in a Spreadsheet"
 layout: post
-date: today
+date: 2025-09-20
 author: "JM"
 image: "thumbnail.png"
 categories: [excel,data-wrangling, ]

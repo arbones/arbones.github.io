@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="JM">
+<meta name="dcterms.date" content="2025-09-23">
 
-<title>Adipofat – Adipofat´s blog</title>
+<title>Awesome-Single-Cell – Adipofat´s blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +68,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Adipofat´s blog</span>
     </a>
   </div>
@@ -149,7 +91,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
@@ -176,158 +118,89 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Adipofat</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Awesome-Single-Cell</h1>
+            <p class="subtitle lead">Navigating the Single-Cell Landscape: An Essential Community Resource</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SingleCell</div>
+                <div class="quarto-category">GitHub</div>
+                <div class="quarto-category">Repository</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>JM </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 23, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="R2l0SHVi">GitHub <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVwb3NpdG9yeQ==">Repository <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U2luZ2xlQ2VsbA==">SingleCell <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YmlvaW5mb3JtYXRpY3M=">bioinformatics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGF0YS13cmFuZ2xpbmc=">data-wrangling <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZXhjZWw=">excel <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW50cm9kdWN0aW9u">introduction <span class="quarto-category-count">(1)</span></div><div class="category" data-category="b21pY3M=">omics <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p>Single-cell genomics is growing at breakneck speed, generating massive datasets that demand specialized analysis. The challenge isn’t just the biology—it’s keeping up with the ever-expanding ecosystem of software, protocols, and resources. For many, navigating this landscape can feel overwhelming.</p>
+<p>That’s where the <a href="https://github.com/seandavi/awesome-single-cell"><strong><code>awesome-single-cell</code></strong></a> repository comes in.</p>
+<section id="what-it-is" class="level3">
+<h3 class="anchored" data-anchor-id="what-it-is">What It Is</h3>
+<div style="float: right; margin-right: 20px; margin-bottom: 10px;">
+<p><img src="ChatGPT2.png" class="img-fluid" width="400"></p>
+</div>
+<p>Curated by Sean Davis and a broad community of contributors, this open-source GitHub repository has become a central hub for single-cell researchers. It’s a living, community-driven catalog of tools and resources spanning the field—covering <strong>RNA-seq, ATAC-seq, epigenomics, spatial transcriptomics, and more</strong>.</p>
+<p>The project’s popularity speaks for itself: over <strong>3.5k stars</strong> and <strong>1k forks</strong> on GitHub, with more than <strong>180 contributors</strong> actively keeping it updated.</p>
+<hr>
+</section>
+<section id="why-it-matters" class="level3">
+<h3 class="anchored" data-anchor-id="why-it-matters">Why It Matters</h3>
+<p>Single-cell datasets bring unique analytical hurdles: correcting noise, integrating across batches or assays, identifying rare cell types, or charting developmental trajectories. Each task requires carefully tuned methods, and the <code>awesome-single-cell</code> repo provides a <strong>roadmap to solutions</strong>.</p>
+<p>From basics like <strong>quality control</strong> and <strong>dimension reduction</strong> to advanced workflows for <strong>pseudotime inference</strong> or <strong>gene regulatory network analysis</strong>, the repository organizes the community’s best tools in one place.</p>
+</section>
+<section id="what-youll-find" class="level3">
+<h3 class="anchored" data-anchor-id="what-youll-find">What You’ll Find</h3>
+<p>The resource is carefully structured to meet the diverse needs of the field:</p>
+<ul>
+<li><strong>Software Packages</strong> – Key tools for transcriptomics (e.g., Scanpy, Seurat), epigenomics (e.g., ArchR, Signac), copy number analysis, and the emerging wave of <strong>single-cell large models</strong> (e.g., scGPT).</li>
+<li><strong>Multi-Omics Integration</strong> – Approaches like LIGER, TotalVI, and MultiVI for combining modalities such as RNA, ATAC, and protein.</li>
+<li><strong>Spatial Transcriptomics</strong> – Tools like BayesSpace, SpaGCN, and CellTrek for mapping gene expression in tissue space.</li>
+<li><strong>Data Portals &amp; Apps</strong> – Public datasets and interactive platforms, including <strong>CELLxGENE</strong> and the <strong>EBI Single Cell Atlas</strong>.</li>
+<li><strong>Tutorials &amp; Workflows</strong> – End-to-end guides, from Bioconductor pipelines to nf-core workflows.</li>
+<li><strong>Key Reviews &amp; Comparisons</strong> – Curated literature to help benchmark and select the right methods.</li>
+</ul>
+</section>
+<section id="built-by-the-community" class="level3">
+<h3 class="anchored" data-anchor-id="built-by-the-community">Built by the Community</h3>
+<p>What makes <code>awesome-single-cell</code> unique is the collective effort behind it. The repository is explicitly open to contributions and benefits from a large, diverse group of maintainers. Beyond technical resources, it also highlights initiatives to improve equity in science, such as curated speaker lists to reduce gender bias at conferences.</p>
+</section>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p>The single-cell field is complex and fast-moving, but the <strong><code>awesome-single-cell</code></strong> repository acts as a compass, pointing researchers toward the right tools, datasets, and learning resources. It’s a prime example of how community collaboration can keep pace with scientific innovation—and make the journey a little less overwhelming.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="U2luZ2xlQ2VsbCUyQ0dpdEh1YiUyQ1JlcG9zaXRvcnk=" data-listing-date-sort="1758600000000" data-listing-file-modified-sort="1758642937738" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="411">
-<div class="thumbnail">
-<p><a href="./posts/02.awesomeSC/index.html" class="no-external"></a></p><a href="./posts/02.awesomeSC/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/02.awesomeSC/ChatGPT1.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/02.awesomeSC/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/02.awesomeSC/index.html" class="no-external">Awesome-Single-Cell</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/02.awesomeSC/index.html" class="no-external">Navigating the Single-Cell Landscape: An Essential Community Resource</a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('U2luZ2xlQ2VsbA=='); return false;">
-SingleCell
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R2l0SHVi'); return false;">
-GitHub
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('UmVwb3NpdG9yeQ=='); return false;">
-Repository
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/02.awesomeSC/index.html" class="no-external">Single-cell genomics is growing at breakneck speed, generating massive datasets that demand specialized analysis. The challenge isn’t just the biology—it’s keeping up with…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/02.awesomeSC/index.html" class="no-external">
-<div class="listing-date">
-Sep 23, 2025
-</div>
-<div class="listing-author">
-JM
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="ZXhjZWwlMkNkYXRhLXdyYW5nbGluZw==" data-listing-date-sort="1758340800000" data-listing-file-modified-sort="1758642911355" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="516">
-<div class="thumbnail">
-<p><a href="./posts/01.excel/index.html" class="no-external"></a></p><a href="./posts/01.excel/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/01.excel/thumbnail.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/01.excel/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/01.excel/index.html" class="no-external">The Excel-pocalypse</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/01.excel/index.html" class="no-external">Where Good Research Goes to Die in a Spreadsheet</a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('ZXhjZWw='); return false;">
-excel
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YS13cmFuZ2xpbmc='); return false;">
-data-wrangling
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/01.excel/index.html" class="no-external">Spreadsheets look simple, friendly, and universal. But history has shown again and again: when important science is entrusted to a spreadsheet, disaster is never far away.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/01.excel/index.html" class="no-external">
-<div class="listing-date">
-Sep 20, 2025
-</div>
-<div class="listing-author">
-JM
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="b21pY3MlMkNiaW9pbmZvcm1hdGljcyUyQ2ludHJvZHVjdGlvbg==" data-listing-date-sort="1758168000000" data-listing-file-modified-sort="1758370583049" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="102">
-<div class="thumbnail">
-<p><a href="./posts/00.hello_world/index.html" class="no-external"></a></p><a href="./posts/00.hello_world/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/00.hello_world/thumbnail.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/00.hello_world/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/00.hello_world/index.html" class="no-external">Hello World…</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/00.hello_world/index.html" class="no-external">…from Omic Science!</a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('b21pY3M='); return false;">
-omics
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YmlvaW5mb3JtYXRpY3M='); return false;">
-bioinformatics
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('aW50cm9kdWN0aW9u'); return false;">
-introduction
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/00.hello_world/index.html" class="no-external">Welcome to our GitHub Pages site dedicated to omic sciences! 🧬🔬</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/00.hello_world/index.html" class="no-external">
-<div class="listing-date">
-Sep 18, 2025
-</div>
-<div class="listing-author">
-JM
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
