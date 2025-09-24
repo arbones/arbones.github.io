@@ -8,23 +8,21 @@ image: "ChatGPT1.png"
 categories: [SingleCell,GitHub,Repository ]
 ---
 
-Single-cell genomics is growing at breakneck speed, generating massive datasets that demand specialized analysis. The challenge isn’t just the biology—it’s keeping up with the ever-expanding ecosystem of software, protocols, and resources. For many, navigating this landscape can feel overwhelming.
+Single-cell genomics is growing at breakneck speed, generating massive datasets that demand specialized analysis. The challenge isn’t just the biology, it’s keeping up with the ever-expanding ecosystem of software, protocols, and resources. For many, navigating this landscape can feel overwhelming.
 
 That’s where the [**`awesome-single-cell`**](https://github.com/seandavi/awesome-single-cell) repository comes in.
 
 ### What It Is
 
-<div style="float: right; margin-right: 20px; margin-bottom: 10px;">
-
-![](ChatGPT2.png){width=400}
-
-</div>
+::: {style="float: right; margin-right: 20px; margin-bottom: 10px;"}
+![](ChatGPT2.png){width="350"}
+:::
 
 Curated by Sean Davis and a broad community of contributors, this open-source GitHub repository has become a central hub for single-cell researchers. It’s a living, community-driven catalog of tools and resources spanning the field—covering **RNA-seq, ATAC-seq, epigenomics, spatial transcriptomics, and more**.
 
 The project’s popularity speaks for itself: over **3.5k stars** and **1k forks** on GitHub, with more than **180 contributors** actively keeping it updated.
 
----
+------------------------------------------------------------------------
 
 ### Why It Matters
 
@@ -43,10 +41,10 @@ The resource is carefully structured to meet the diverse needs of the field:
 -   **Tutorials & Workflows** – End-to-end guides, from Bioconductor pipelines to nf-core workflows.
 -   **Key Reviews & Comparisons** – Curated literature to help benchmark and select the right methods.
 
-### Built by the Community
-
-What makes `awesome-single-cell` unique is the collective effort behind it. The repository is explicitly open to contributions and benefits from a large, diverse group of maintainers. Beyond technical resources, it also highlights initiatives to improve equity in science, such as curated speaker lists to reduce gender bias at conferences.
-
 ### Final Thoughts
 
-The single-cell field is complex and fast-moving, but the **`awesome-single-cell`** repository acts as a compass, pointing researchers toward the right tools, datasets, and learning resources. It’s a prime example of how community collaboration can keep pace with scientific innovation—and make the journey a little less overwhelming.
+> The single-cell field is complex and fast-moving, but the **`awesome-single-cell`** repository acts as a compass, pointing researchers toward the right tools, datasets, and learning resources. It’s a prime example of how community collaboration can keep pace with scientific innovation—and make the journey a little less overwhelming.
+
+
+
+
