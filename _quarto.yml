@@ -3,11 +3,11 @@ project:
   output-dir: docs
 
 website:
-  title: "Adipofat´s blog"
+  title: "ADIPOFAT"
   navbar:
     right:
       - about.qmd
-      - text: main
+      - text: Research
         href: https://arbones.github.io/adipo2/
       - icon: github
         href: https://github.com/arbones?tab=repositories
