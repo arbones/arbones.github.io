@@ -74,6 +74,76 @@
     "href": "index.html",
     "title": "BLOG",
     "section": "",
-    "text": "Awesome-Single-Cell\n\n\nNavigating the Single-Cell Landscape: An Essential Community Resource\n\n\n\nSingleCell\n\n\nGitHub\n\n\nRepository\n\n\n\n\n\n\n\n\n\nSep 23, 2025\n\n\nJM\n\n\n\n\n\n\n\n\n\n\n\n\nThe Excel-pocalypse\n\n\nWhere Good Research Goes to Die in a Spreadsheet\n\n\n\nexcel\n\n\ndata-wrangling\n\n\n\n\n\n\n\n\n\nSep 20, 2025\n\n\nJM\n\n\n\n\n\n\n\n\n\n\n\n\nHello World…\n\n\n…from Omic Science!\n\n\n\nomics\n\n\nbioinformatics\n\n\nintroduction\n\n\n\n\n\n\n\n\n\nSep 18, 2025\n\n\nJM\n\n\n\n\n\n\nNo matching items"
+    "text": "AI-Enhanced Scientific Writing\n\n\nTransforming Quarto Analyses into Publication-Ready Narratives with Claude code\n\n\n\nClaude\n\nAI\n\nWriting\n\nQuarto\n\n\n\n\n\n\n\n\n\nDec 20, 2025\n\n\nJM\n\n\n\n\n\n\n\n\n\n\n\n\nAwesome-Single-Cell\n\n\nNavigating the Single-Cell Landscape: An Essential Community Resource\n\n\n\nSingleCell\n\nGitHub\n\nRepository\n\n\n\n\n\n\n\n\n\nSep 23, 2025\n\n\nJM\n\n\n\n\n\n\n\n\n\n\n\n\nThe Excel-pocalypse\n\n\nWhere Good Research Goes to Die in a Spreadsheet\n\n\n\nexcel\n\ndata-wrangling\n\n\n\n\n\n\n\n\n\nSep 20, 2025\n\n\nJM\n\n\n\n\n\n\n\n\n\n\n\n\nHello World…\n\n\n…from Omic Science!\n\n\n\nomics\n\nbioinformatics\n\nintroduction\n\n\n\n\n\n\n\n\n\nSep 18, 2025\n\n\nJM\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/03.AIwriting/index.html",
+    "href": "posts/03.AIwriting/index.html",
+    "title": "AI-Enhanced Scientific Writing",
+    "section": "",
+    "text": "Quarto is an open-source scientific publishing system that enables researchers to weave together code, results, and narrative text into reproducible documents. Think of it as the evolution of R Markdown and Jupyter notebooks, a polyglot platform that works seamlessly with R, Python, Julia, and other languages.\nA Quarto project combines:\n\nSource files (.qmd or .ipynb): Plain-text documents containing code chunks, statistical analyses, and markdown text\nConfiguration (_quarto.yml): Defines the project structure, navigation, and visual theme\nRendered output (docs/ directory): Auto-generated HTML, PDF, or website versions of your analyses\n\nFor scientists, Quarto solves a critical problem: maintaining a single source of truth where code and interpretation live together, preventing the drift between analysis and write-up that plagues traditional workflows."
+  },
+  {
+    "objectID": "posts/03.AIwriting/index.html#what-is-quarto",
+    "href": "posts/03.AIwriting/index.html#what-is-quarto",
+    "title": "AI-Enhanced Scientific Writing",
+    "section": "",
+    "text": "Quarto is an open-source scientific publishing system that enables researchers to weave together code, results, and narrative text into reproducible documents. Think of it as the evolution of R Markdown and Jupyter notebooks, a polyglot platform that works seamlessly with R, Python, Julia, and other languages.\nA Quarto project combines:\n\nSource files (.qmd or .ipynb): Plain-text documents containing code chunks, statistical analyses, and markdown text\nConfiguration (_quarto.yml): Defines the project structure, navigation, and visual theme\nRendered output (docs/ directory): Auto-generated HTML, PDF, or website versions of your analyses\n\nFor scientists, Quarto solves a critical problem: maintaining a single source of truth where code and interpretation live together, preventing the drift between analysis and write-up that plagues traditional workflows."
+  },
+  {
+    "objectID": "posts/03.AIwriting/index.html#the-challenge-from-code-to-coherent-narrative",
+    "href": "posts/03.AIwriting/index.html#the-challenge-from-code-to-coherent-narrative",
+    "title": "AI-Enhanced Scientific Writing",
+    "section": "The Challenge: From Code to Coherent Narrative",
+    "text": "The Challenge: From Code to Coherent Narrative\nWhile Quarto excels at rendering code and results, transforming computational analysis into publication-ready scientific prose remains cognitively demanding. I normaly must:\n\nSynthesize complex operations into clear methodology descriptions\nExtract quantitative results from rendered outputs\nMaintain consistent scientific voice and style\nEnsure logical flow between analysis sections\nBalance technical accuracy with accessibility\n\nThis is where AI integration becomes transformative."
+  },
+  {
+    "objectID": "posts/03.AIwriting/index.html#the-ai-enhanced-workflow-architecture",
+    "href": "posts/03.AIwriting/index.html#the-ai-enhanced-workflow-architecture",
+    "title": "AI-Enhanced Scientific Writing",
+    "section": "The AI-Enhanced Workflow Architecture",
+    "text": "The AI-Enhanced Workflow Architecture\n\nI have implemented a Claude-assisted scientific writing system in all my Quarto projects using Positron (IDE enviroment) built on three pillars:\n\n1. Project Instructions (CLAUDE.md)\nThe CLAUDE.md file serves as the command center, providing Claude with:\n\nSystem architecture overview: Explains the Positron IDE environment, Quarto structure, and file organization\nCoding standards: Enforces tidyverse patterns, vectorization over loops, use of native R pipe |&gt;, and mandatory code annotations\nWorkflow protocols: Defines how to interpret results, write/edit code, and handle git operations\nQuick reference guide: Maps common requests to specific actions\n\nThis file essentially “programs” Claude to function as a domain-specific research assistant who understands both the technical environment and scientific goals.\n\n\n2. Context Profiles (.context/ directory)\nThree critical files shape Claude’s behavior:\n\nquarto-narrative-skill/SKILL.md\nThis is the heart of the enhancer system; a comprehensive instruction manual for transforming Quarto analyses into scientific narratives. It defines:\n\nInput requirements: Reads three files per analysis:\n\nThe .qmd source (code logic and structure)\nThe rendered .html (numerical results and outputs)\nThe index.qmd (experimental context and research questions)\n\nCore workflow:\n\nParse all input files to extract code operations, results, and context\nMaintain exact section hierarchy from the .qmd structure\nFor each section: describe code operations → report HTML results → interpret biologically\nApply strict writing style constraints\nSynthesize into cohesive narrative prose\n\nHTML parsing strategy: Extracts content from rendered HTML by identifying text between tags (&lt;p&gt;, &lt;td&gt;, &lt;pre&gt;), ignoring JavaScript/CSS, and pulling numerical values from tables and code outputs\nSpecial handling: Covers multiple comparisons, negative results, technical issues, and complex visualizations\n\n\n\nwritingStyle_OSmithies.json\nA structured specification of scientific voice inspired by Nobel laureate Oliver Smithies. Key constraints:\n\nVoice: Active, first-person agency (“We performed” not “was performed”)\nTone: Decisive, objective, authoritative—avoid hedging\nSentence structure: Under 25 words, one idea per sentence, linear flow\nData reporting: Specific values, explicit statistical significance\nFlow pattern: Context → Action → Result → Meaning\n\nExample transformation:\n❌ \"Analysis was performed using DESeq2\"\n✅ \"We performed analysis using DESeq2\"\n\n❌ \"Many genes were significant\"\n✅ \"We detected 347 significant genes\"\n\n\ngit_workflow.md\nEnforces version control standards:\n\nCommit format: Title line + bullet points explaining specific changes\nDistinguishes between detailed explanations (for analysis code) and simple messages (for documentation)\nExplicitly excludes AI attribution messages\n\nIMPORTANT: These files live inside the Quarto project\n\n\n\n3. The Invocation Pattern\nWhen I need to document an analysis, I fire up Claude code in a terminal window and use the next prompt to trigger the workflow:\n\"Write the analysis for xxxxxx.qmd\" \nClaude then invokes quarto-narrative-skill:\n\nReads the source .qmd file (understanding methodology)\nReads the rendered .html file (extracting results)\nReads index.qmd (gathering experimental context)\nApplies the Oliver Smithies writing style\nGenerates publication-ready prose that:\n\nMaintains the exact section structure from the .qmd\nDescribes what each code chunk does and why\nReports specific numerical results from the HTML\nProvides biological interpretation\nUses active voice, concise sentences, and precise terminology"
+  },
+  {
+    "objectID": "posts/03.AIwriting/index.html#example-output-pattern",
+    "href": "posts/03.AIwriting/index.html#example-output-pattern",
+    "title": "AI-Enhanced Scientific Writing",
+    "section": "Example Output Pattern",
+    "text": "Example Output Pattern\nGiven a .qmd section:\n## Differential Expression Analysis\ndds &lt;- DESeq(dds)\nres &lt;- results(dds, contrast=c(\"genotype\", \"APOE2\", \"WT\"))\nres_sig &lt;- subset(res, padj &lt; 0.05 & abs(log2FoldChange) &gt; 1)\nAnd HTML showing:\n347 genes with padj &lt; 0.05 and |log2FC| &gt; 1\nUpregulated: 198 genes\nDownregulated: 149 genes\nClaude generates: &gt; “We performed differential expression analysis using DESeq2 to compare APOE2 and wild-type mice. We identified 347 genes with adjusted p-values below 0.05 and absolute log2 fold changes exceeding 1. Of these, 198 genes showed increased expression in APOE2 mice, while 149 showed decreased expression.”"
+  },
+  {
+    "objectID": "posts/03.AIwriting/index.html#why-this-approach-works",
+    "href": "posts/03.AIwriting/index.html#why-this-approach-works",
+    "title": "AI-Enhanced Scientific Writing",
+    "section": "Why This Approach Works",
+    "text": "Why This Approach Works\nThis system succeeds because it:\n\nSeparates concerns: Code lives in .qmd, results in .html, style rules in CLAUDE.md and .context/. Style rules can be reused in other projects.\nEnforces consistency: The writing style JSON ensures every narrative follows the same rigorous standard\nPreserves scientific accuracy: By reading both source code and rendered output, Claude reports exact values and methods\nMaintains structure: The skill explicitly preserves the .qmd section hierarchy, preventing AI “creativity” from reorganizing logical flow\nIs reproducible: The entire workflow is version-controlled and can be audited"
+  },
+  {
+    "objectID": "posts/03.AIwriting/index.html#key-innovations",
+    "href": "posts/03.AIwriting/index.html#key-innovations",
+    "title": "AI-Enhanced Scientific Writing",
+    "section": "Key Innovations",
+    "text": "Key Innovations\n\nHTML-as-database: Treating rendered HTML as a structured data source for result extraction\nStyle-as-code: Formalizing scientific voice into a machine-readable specification\nContext injection: Using .context/ files to provide persistent behavioral constraints\nSkill-based invocation: Creating specialized “modes” for Claude through detailed skill definitions"
+  },
+  {
+    "objectID": "posts/03.AIwriting/index.html#practical-benefits",
+    "href": "posts/03.AIwriting/index.html#practical-benefits",
+    "title": "AI-Enhanced Scientific Writing",
+    "section": "Practical Benefits",
+    "text": "Practical Benefits\nFor researchers, this system:\n\nReduces writing time from hours to minutes\nEnsures consistent voice across multi-year projects\nCatches methodology/results mismatches (if code doesn’t match description, it’s obvious)\nEnables rapid iteration (change analysis → re-render → regenerate narrative)\nCreates an audit trail (git history shows when code changed vs. when prose changed)"
+  },
+  {
+    "objectID": "posts/03.AIwriting/index.html#files-that-make-it-work",
+    "href": "posts/03.AIwriting/index.html#files-that-make-it-work",
+    "title": "AI-Enhanced Scientific Writing",
+    "section": "Files That Make It Work",
+    "text": "Files That Make It Work\nEssential components:\n\nCLAUDE.md: System instructions and quick reference\n.context/quarto-narrative-skill/SKILL.md: Narrative generation protocol\n.context/writingStyle_OSmithies.json: Voice specification\n.context/git_workflow.md: Version control standards\n_quarto.yml: Project configuration\n\nTogether, these files transform Claude from a general-purpose AI into a specialized scientific writing assistant that understands computational biology, R/Python code, statistical analysis, and publication standards."
+  },
+  {
+    "objectID": "posts/03.AIwriting/index.html#the-future-of-ai-assisted-science",
+    "href": "posts/03.AIwriting/index.html#the-future-of-ai-assisted-science",
+    "title": "AI-Enhanced Scientific Writing",
+    "section": "The Future of AI-Assisted Science",
+    "text": "The Future of AI-Assisted Science\n\nThis method demonstrates that AI’s value in research isn’t just running analyses, it’s in maintaining the connective tissue between computation and communication. By codifying scientific writing standards and creating structured workflows, we can leverage AI to handle the mechanical aspects of prose generation while researchers focus on interpretation and discovery.\n\n\nThe system is transparent, auditable, and version-controlled, essential properties for scientific reproducibility. It doesn’t replace scientific thinking; it amplifies it by removing friction between “I analyzed this” and “I can clearly explain what I did.”"
   }
 ]
