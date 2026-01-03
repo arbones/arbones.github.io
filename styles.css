@@ -1,1 +1,715 @@
-/* css styles */
+/* ============================================
+   ADIPOFAT Blog - Minimalist Design System
+   Inspired by sophisticated technical publishing
+   ============================================ */
+
+/* ============================================
+   CUSTOM PROPERTIES
+   ============================================ */
+:root {
+  /* Color Palette - Restrained & Professional */
+  --color-background: #fafaf8;
+  --color-surface: #ffffff;
+  --color-text-primary: #1a1a19;
+  --color-text-secondary: #6b6b68;
+  --color-text-tertiary: #9a9a97;
+  --color-border: #e5e5e2;
+  --color-border-light: #f0f0ed;
+  --color-accent: #2d2d2b;
+  --color-link: #3d3d3a;
+  --color-link-hover: #000000;
+
+  /* Typography Scale */
+  --font-display: 'Crimson Pro', 'Georgia', serif;
+  --font-body: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+  --font-size-xs: 0.813rem;
+  --font-size-sm: 0.938rem;
+  --font-size-base: 1.063rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.75rem;
+  --font-size-4xl: 3.5rem;
+
+  /* Spacing System - Generous & Rhythmic */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 8rem;
+
+  /* Layout */
+  --max-width-text: 720px;
+  --max-width-content: 1200px;
+  --border-radius: 2px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   GOOGLE FONTS IMPORT
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Work+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ============================================
+   GLOBAL RESETS & BASE STYLES
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: 1.7;
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  font-weight: 400;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-md);
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--space-lg);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-md);
+  font-weight: 400;
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+  margin-top: var(--space-lg);
+  font-weight: 500;
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+  margin-top: var(--space-md);
+  font-weight: 500;
+}
+
+h5 {
+  font-size: var(--font-size-lg);
+  margin-top: var(--space-md);
+  font-weight: 600;
+}
+
+h6 {
+  font-size: var(--font-size-base);
+  margin-top: var(--space-md);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: var(--font-body);
+}
+
+p {
+  margin-bottom: var(--space-md);
+  max-width: var(--max-width-text);
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-border);
+  transition: all var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-link-hover);
+  border-bottom-color: var(--color-text-primary);
+}
+
+strong, b {
+  font-weight: 600;
+}
+
+em, i {
+  font-style: italic;
+}
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+.navbar {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border-light);
+  padding: var(--space-md) 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  background-color: rgba(250, 250, 248, 0.95);
+}
+
+.navbar-brand {
+  font-family: var(--font-display);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  border-bottom: none !important;
+}
+
+.navbar-brand:hover {
+  opacity: 0.7;
+  border-bottom: none !important;
+}
+
+.navbar-nav {
+  gap: var(--space-lg);
+}
+
+.nav-link {
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+  color: var(--color-text-secondary) !important;
+  border-bottom: none !important;
+  transition: color var(--transition-fast);
+  padding: var(--space-xs) 0 !important;
+}
+
+.nav-link:hover {
+  color: var(--color-text-primary) !important;
+}
+
+/* ============================================
+   HERO / TITLE BANNER
+   ============================================ */
+.quarto-title-banner {
+  background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-background) 100%);
+  border-bottom: 1px solid var(--color-border-light);
+  padding: var(--space-3xl) var(--space-lg) var(--space-2xl);
+  margin-bottom: var(--space-2xl);
+}
+
+.quarto-title-block .quarto-title h1.title,
+.quarto-title-block .quarto-title .title {
+  font-size: var(--font-size-4xl);
+  font-weight: 300;
+  margin-bottom: var(--space-sm);
+  color: var(--color-text-primary);
+  letter-spacing: -0.03em;
+}
+
+.quarto-title-block .quarto-title .subtitle {
+  font-family: var(--font-body);
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  font-weight: 400;
+  margin-top: var(--space-md);
+}
+
+.quarto-title-meta {
+  margin-top: var(--space-lg);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+}
+
+/* ============================================
+   BLOG LISTING
+   ============================================ */
+#quarto-content .listing-default {
+  display: grid;
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+  padding: 0 var(--space-lg);
+}
+
+.quarto-listing-item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: all var(--transition-base);
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--space-lg);
+  padding: 0;
+  height: 100%;
+}
+
+.quarto-listing-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  border-color: var(--color-border);
+}
+
+.quarto-listing-item .listing-image {
+  width: 280px;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+}
+
+.quarto-listing-item .listing-item-img-placeholder {
+  background: linear-gradient(135deg, var(--color-border-light) 0%, var(--color-background) 100%);
+  width: 280px;
+  height: 200px;
+}
+
+.quarto-listing-item .listing-content {
+  padding: var(--space-lg);
+  padding-left: 0;
+}
+
+.quarto-listing-item .listing-title {
+  font-family: var(--font-display);
+  font-size: var(--font-size-2xl);
+  font-weight: 500;
+  margin-bottom: var(--space-sm);
+  line-height: 1.3;
+}
+
+.quarto-listing-item .listing-title a {
+  color: var(--color-text-primary);
+  border-bottom: none;
+}
+
+.quarto-listing-item .listing-title a:hover {
+  color: var(--color-text-secondary);
+}
+
+.quarto-listing-item .listing-subtitle {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+  line-height: 1.6;
+}
+
+.quarto-listing-item .listing-description {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+}
+
+.quarto-listing-item .listing-categories {
+  display: flex;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+  margin-top: var(--space-md);
+}
+
+.quarto-listing-item .listing-category {
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-tertiary);
+  background: var(--color-background);
+  padding: 0.25rem 0.75rem;
+  border-radius: 3px;
+  border-bottom: none;
+}
+
+.quarto-listing-item .listing-date {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+  margin-top: var(--space-sm);
+  font-family: var(--font-mono);
+}
+
+/* ============================================
+   MAIN CONTENT AREA
+   ============================================ */
+#quarto-content {
+  max-width: var(--max-width-content);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg);
+}
+
+#quarto-content.page-layout-full {
+  max-width: 100%;
+}
+
+.page-columns {
+  max-width: var(--max-width-text);
+  margin: 0 auto;
+}
+
+article {
+  max-width: var(--max-width-text);
+  margin: 0 auto;
+}
+
+/* ============================================
+   CODE BLOCKS
+   ============================================ */
+code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--color-background);
+  padding: 0.2em 0.4em;
+  border-radius: var(--border-radius);
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+pre {
+  background: var(--color-accent);
+  color: var(--color-background);
+  padding: var(--space-md);
+  border-radius: var(--border-radius);
+  overflow-x: auto;
+  margin: var(--space-lg) 0;
+  border: 1px solid var(--color-text-primary);
+}
+
+pre code {
+  background: transparent;
+  color: var(--color-background);
+  padding: 0;
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+}
+
+/* ============================================
+   LISTS
+   ============================================ */
+ul, ol {
+  margin-bottom: var(--space-md);
+  padding-left: var(--space-lg);
+  max-width: var(--max-width-text);
+}
+
+li {
+  margin-bottom: var(--space-xs);
+  line-height: 1.7;
+}
+
+li::marker {
+  color: var(--color-text-tertiary);
+}
+
+/* ============================================
+   BLOCKQUOTES
+   ============================================ */
+blockquote {
+  border-left: 3px solid var(--color-border);
+  padding-left: var(--space-md);
+  margin: var(--space-lg) 0;
+  color: var(--color-text-secondary);
+  font-style: italic;
+  font-family: var(--font-display);
+  font-size: var(--font-size-lg);
+  max-width: var(--max-width-text);
+}
+
+/* ============================================
+   IMAGES & FIGURES
+   ============================================ */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+
+figure {
+  margin: var(--space-xl) 0;
+}
+
+figcaption {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+  text-align: center;
+  margin-top: var(--space-sm);
+  font-style: italic;
+}
+
+/* ============================================
+   TABLES
+   ============================================ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-lg) 0;
+  font-size: var(--font-size-sm);
+}
+
+thead {
+  border-bottom: 2px solid var(--color-border);
+}
+
+th {
+  text-align: left;
+  padding: var(--space-sm);
+  font-weight: 600;
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+td {
+  padding: var(--space-sm);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.nav-footer {
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border-light);
+  margin-top: var(--space-3xl);
+  padding: var(--space-xl) var(--space-lg);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+}
+
+.nav-footer-center,
+.nav-footer-left,
+.nav-footer-right {
+  color: var(--color-text-tertiary);
+}
+
+/* ============================================
+   BUTTONS & INTERACTIVE ELEMENTS
+   ============================================ */
+.btn {
+  font-family: var(--font-body);
+  font-weight: 500;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-fast);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+}
+
+.btn:hover {
+  background: var(--color-background);
+  border-color: var(--color-text-primary);
+  transform: translateY(-1px);
+}
+
+/* ============================================
+   CATEGORIES
+   ============================================ */
+.quarto-category {
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.8rem;
+  background: var(--color-background);
+  border-radius: 3px;
+  border: none;
+  color: var(--color-text-secondary);
+}
+
+.quarto-category:hover {
+  background: var(--color-border-light);
+  color: var(--color-text-primary);
+}
+
+/* ============================================
+   ABOUT PAGE
+   ============================================ */
+.about-entity {
+  margin-top: var(--space-xl);
+  padding: var(--space-xl);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--border-radius);
+}
+
+.about-entity .about-image {
+  border-radius: 50%;
+  max-width: 200px;
+  margin-bottom: var(--space-lg);
+}
+
+.about-links {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.about-link {
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-fast);
+}
+
+.about-link:hover {
+  background: var(--color-surface);
+  border-color: var(--color-text-primary);
+  transform: translateY(-1px);
+}
+
+/* ============================================
+   HORIZONTAL RULES
+   ============================================ */
+hr {
+  border: none;
+  border-top: 1px solid var(--color-border-light);
+  margin: var(--space-xl) 0;
+}
+
+/* ============================================
+   ACCESSIBILITY & FOCUS STATES
+   ============================================ */
+*:focus-visible {
+  outline: 2px solid var(--color-text-primary);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 768px) {
+  :root {
+    --font-size-4xl: 2.5rem;
+    --font-size-3xl: 2rem;
+    --font-size-2xl: 1.5rem;
+    --space-3xl: 4rem;
+    --space-2xl: 3rem;
+  }
+
+  .quarto-listing-item {
+    grid-template-columns: 1fr;
+  }
+
+  .quarto-listing-item .listing-image,
+  .quarto-listing-item .listing-item-img-placeholder {
+    width: 100%;
+    height: 240px;
+  }
+
+  .quarto-listing-item .listing-content {
+    padding: var(--space-lg);
+  }
+
+  .quarto-title-banner {
+    padding: var(--space-xl) var(--space-md);
+  }
+
+  #quarto-content {
+    padding: var(--space-lg) var(--space-md);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --font-size-4xl: 2rem;
+    --font-size-3xl: 1.5rem;
+    --space-lg: 1.5rem;
+  }
+
+  .navbar-nav {
+    gap: var(--space-sm);
+  }
+}
+
+/* ============================================
+   SMOOTH SCROLLING & ANIMATIONS
+   ============================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Subtle fade-in animation for content */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.quarto-listing-item {
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* ============================================
+   CUSTOM REFINEMENTS
+   ============================================ */
+
+/* Refined link behavior for nav items */
+.navbar a.nav-link:hover {
+  border-bottom: none;
+}
+
+/* Clean post metadata */
+.metadata-row {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+  font-family: var(--font-mono);
+  margin-top: var(--space-md);
+}
+
+/* Refined spacing for post content */
+.quarto-post .body {
+  margin-top: var(--space-2xl);
+}
+
+/* Clean category badges on individual posts */
+.quarto-categories {
+  margin-top: var(--space-lg);
+  display: flex;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+.quarto-categories .quarto-category {
+  font-size: var(--font-size-xs);
+  padding: 0.3rem 0.8rem;
+  background: var(--color-background);
+  border: 1px solid var(--color-border-light);
+}
