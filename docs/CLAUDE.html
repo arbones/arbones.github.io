@@ -179,6 +179,75 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>In short, it’s a Quarto project that takes <code>.qmd</code> files, and renders them into a blog website within the <code>docs/</code> directory.</p>
 </section>
+<section id="blog-content-and-themes" class="level2">
+<h2 class="anchored" data-anchor-id="blog-content-and-themes">Blog Content and Themes</h2>
+<section id="overview-and-mission" class="level3">
+<h3 class="anchored" data-anchor-id="overview-and-mission">Overview and Mission</h3>
+<p>ADIPOFAT is a scientific blog focused on the intersection of <strong>omics sciences</strong>, <strong>spatial biology</strong>, and <strong>data science</strong>. The blog serves as an open research notebook where the author (JM) shares notes, tutorials, reflections, and occasional digressions from their work in computational biology.</p>
+<p>The primary goal is to create a practical resource for fellow researchers and students navigating the complexities of modern biological data analysis. The blog documents the learning process openly, covering both successes and challenges in real-world research contexts.</p>
+<p>This blog is a component of broader research activities. For comprehensive information about lab projects, publications, and collaborations, readers are directed to the <a href="https://arbones.github.io/adipo2/">lab’s main page</a>.</p>
+</section>
+<section id="target-audience" class="level3">
+<h3 class="anchored" data-anchor-id="target-audience">Target Audience</h3>
+<p>The blog is written for: * <strong>Computational biologists</strong> working with high-dimensional omics data * <strong>Graduate students and postdocs</strong> learning bioinformatics and spatial analysis techniques * <strong>Wet-lab researchers</strong> transitioning to computational work * <strong>Data scientists</strong> interested in biological applications * <strong>Clinicians and translational researchers</strong> exploring omics technologies</p>
+</section>
+<section id="content-categories" class="level3">
+<h3 class="anchored" data-anchor-id="content-categories">Content Categories</h3>
+<p>The blog covers several interconnected themes:</p>
+<section id="omics-sciences" class="level4">
+<h4 class="anchored" data-anchor-id="omics-sciences">1. Omics Sciences</h4>
+<p>Topics include genomics, transcriptomics, proteomics, metabolomics, and their computational analysis. The blog emphasizes: * Single-cell genomics methods and tools * Spatial transcriptomics and imaging-based approaches * Multi-omics integration strategies * Best practices for data analysis pipelines</p>
+</section>
+<section id="research-tools-and-workflows" class="level4">
+<h4 class="anchored" data-anchor-id="research-tools-and-workflows">2. Research Tools and Workflows</h4>
+<p>Critical evaluations of computational tools, software ecosystems, and analytical workflows. This includes: * Community resources (e.g., curated repositories like awesome-single-cell) * Data management and reproducible research practices * AI-assisted scientific writing and analysis workflows * Integration of tools like Quarto, R, Python, and Claude Code</p>
+</section>
+<section id="data-science-best-practices" class="level4">
+<h4 class="anchored" data-anchor-id="data-science-best-practices">3. Data Science Best Practices</h4>
+<p>Practical guidance on avoiding common pitfalls and implementing robust analytical approaches: * Data normalization and preprocessing methods * Statistical considerations in high-throughput experiments * Critical analysis of standard pipelines and when they fail * Version control and computational reproducibility</p>
+</section>
+<section id="critical-perspectives" class="level4">
+<h4 class="anchored" data-anchor-id="critical-perspectives">4. Critical Perspectives</h4>
+<p>The blog doesn’t shy away from examining problems in current research practices: * Dangers of inappropriate tool usage (e.g., Excel in scientific research) * Hidden assumptions in standard analysis methods * Cases where borrowed methods fail in new contexts * Technical debt in scientific computing</p>
+</section>
+</section>
+<section id="current-blog-posts" class="level3">
+<h3 class="anchored" data-anchor-id="current-blog-posts">Current Blog Posts</h3>
+<p>As of January 2026, the blog contains five posts spanning introductory content, critical commentary, technical tutorials, and deep technical analyses:</p>
+<ol type="1">
+<li><strong>“Hello World from Omic Science!”</strong> (September 2025)
+<ul>
+<li><strong>Categories:</strong> omics, bioinformatics, introduction</li>
+<li><strong>Content:</strong> Introductory post establishing the blog’s scope and future direction. Outlines planned coverage of genomics, transcriptomics, proteomics, metabolomics, bioinformatics tools, reproducible workflows, and multi-omics integration.</li>
+</ul></li>
+<li><strong>“The Excel-pocalypse: Where Good Research Goes to Die in a Spreadsheet”</strong> (September 2025)
+<ul>
+<li><strong>Categories:</strong> excel, data-wrangling</li>
+<li><strong>Content:</strong> Critical examination of Excel’s role in scientific disasters. Documents real cases including gene name autoconversion errors affecting 20-30% of genomics papers and the UK COVID-19 testing data loss (15,841 cases) caused by Excel row limits. Argues for proper databases and programming tools over spreadsheets for research data.</li>
+</ul></li>
+<li><strong>“Awesome-Single-Cell: Navigating the Single-Cell Landscape”</strong> (September 2025)
+<ul>
+<li><strong>Categories:</strong> SingleCell, GitHub, Repository</li>
+<li><strong>Content:</strong> Review of the community-curated awesome-single-cell GitHub repository (3.5k+ stars, 180+ contributors). Describes how this resource organizes tools for RNA-seq, ATAC-seq, spatial transcriptomics, multi-omics integration, and provides tutorials and benchmarking studies for the single-cell genomics field.</li>
+</ul></li>
+<li><strong>“AI-Enhanced Scientific Writing: Transforming Quarto Analyses into Publication-Ready Narratives with Claude Code”</strong> (December 2025)
+<ul>
+<li><strong>Categories:</strong> Claude, AI, Writing, Quarto</li>
+<li><strong>Content:</strong> Comprehensive tutorial on the author’s workflow for using Claude Code to convert computational analyses into scientific prose. Details the technical architecture including <code>CLAUDE.md</code> project instructions, <code>.context/</code> directory with writing style specifications (Oliver Smithies style guide), and the <code>quarto-narrative-skill</code> system. Explains how the workflow reads source <code>.qmd</code> files, rendered <code>.html</code> outputs, and experimental context to generate publication-ready narratives while preserving scientific accuracy and consistent voice.</li>
+</ul></li>
+<li><strong>“Why Your Spatial Transcriptomics Analysis Might Be Lying to You (I)”</strong> (January 2026)
+<ul>
+<li><strong>Categories:</strong> SingleCell, SRT, Normalization</li>
+<li><strong>Content:</strong> Technical deep-dive into normalization methods for spatial transcriptomics data. Examines how standard single-cell RNA-seq normalization methods (LogNormalize, SCTransform, scran, etc.) can inadvertently remove genuine biological signals from spatial data due to spatial organization of tissues. Discusses the assumption that library size variation is purely technical, which fails when cell density and RNA content vary systematically across anatomical structures. Provides practical recommendations for spatial data analysis and introduces spatially-aware methods like SpaNorm.</li>
+</ul></li>
+</ol>
+</section>
+<section id="writing-style-and-approach" class="level3">
+<h3 class="anchored" data-anchor-id="writing-style-and-approach">Writing Style and Approach</h3>
+<p>The blog employs an authoritative but accessible tone, balancing technical depth with readability. Posts frequently: * Use concrete examples and real-world case studies * Cite primary literature and benchmarking studies * Provide practical recommendations alongside theoretical discussion * Acknowledge complexity and trade-offs rather than presenting oversimplified solutions * Link to external resources, documentation, and further reading</p>
+<p>The writing reflects a researcher’s perspective: critical, evidence-based, and focused on what actually works in practice rather than what should work in theory.</p>
+</section>
+</section>
 <section id="github-pages-optimization" class="level2">
 <h2 class="anchored" data-anchor-id="github-pages-optimization">GitHub Pages Optimization</h2>
 <p>This blog is optimized for deployment on GitHub Pages. The configuration for GitHub Pages can be found at <a href="httpss://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">Configuring a publishing source for your GitHub Pages site</a>.</p>
