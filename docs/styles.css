@@ -210,10 +210,30 @@ em, i {
    HERO / TITLE BANNER
    ============================================ */
 .quarto-title-banner {
-  background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-background) 100%);
+  background-image: url('adipo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
   border-bottom: 1px solid var(--color-border-light);
   padding: var(--space-3xl) var(--space-lg) var(--space-2xl);
   margin-bottom: var(--space-2xl);
+}
+
+.quarto-title-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(250, 250, 248, 0.9);
+  z-index: 1;
+}
+
+.quarto-title-banner > * {
+  position: relative;
+  z-index: 2;
 }
 
 .quarto-title-block .quarto-title h1.title,
