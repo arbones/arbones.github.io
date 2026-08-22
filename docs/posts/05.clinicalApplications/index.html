@@ -2,19 +2,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="JM">
-<meta name="dcterms.date" content="2026-01-07">
+<meta name="dcterms.date" content="2026-08-22">
 
 <title>The Molecular Microscope: Spatially Resolved Transcriptomics (SRT) in Clinical Research – ADIPOFAT</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -38,10 +44,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-445b8638c3d06994fee0907d791121c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -142,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 7, 2026</p>
+        <p class="date">August 22, 2026</p>
       </div>
     </div>
     
@@ -161,9 +167,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>I’ve been spending some time recently looking at the state of clinical research, particularly how we try to understand disease at a molecular level. It turns out that for the last decade or so, we’ve been effectively trying to debug a complex distributed system (the human body) by looking at a heap dump without a stack trace. We take a biopsy, grind it into a slurry, and sequence it. We get a perfect census of the parts, the gene expression counts, but we completely lose the pointers; we have no idea <em>where</em> those genes were expressed or who they were talking to. It’s like trying to understand a city by counting the bricks in a pile of rubble. You can count them, sure, but you’ve lost the streets.</p>
+<p>I’ve been spending some time recently looking at the state of clinical research, particularly how we try to understand disease at a molecular level. It turns out that for the last decade or so, the standard approach to investigating human biology has resembled analyzing a complex network without recording its relational architecture… we take a biopsy, grind it into a slurry, and sequence it. We get a perfect census of the parts, the gene expression counts, but we completely lose the pointers; we have no idea <em>where</em> those genes were expressed or who they were talking to. It’s like trying to understand a city by counting scattered bricks after demolition. While the raw materials are fully accounted for, the structural layout, pathways, and functional connections that define the living system are entirely lost..</p>
 <p><img src="background.png" class="img-fluid"></p>
-<p>The solution, automagically, is Spatially Resolved Transcriptomics (SRT). It’s an upgrade to the tech stack that feels inevitable once you see it. Instead of the “grind and bind” approach, SRT runs the biochemistry <em>in situ</em>. It maps the gene expression directly onto the histology slide. For the clinicians out there who might feel a bit alienated by the abstract nature of “big data” genomics: this is actually bringing the science back to your home turf. Clinicians have always known that structure <em>is</em> function. A lymphocyte in a tumor is a different object instance than a lymphocyte in the stroma, even if they inherit from the same class. SRT basically validates your spatial intuition with hard data.</p>
+<p>Spatially Resolved Transcriptomics (SRT) provides the methodological answer to this challenge, representing an intuitive yet transformative advancement in biomedical technology. Rather than relying on tissue homogenization, SRT runs the biochemistry <em>in situ</em>. It maps the gene expression directly onto the histology slide. For the clinicians out there who might feel a bit alienated by the abstract nature of “big data” genomics: this is actually bringing the science back to your home turf. Clinicians have always known that structure <em>is</em> function. A lymphocyte in a tumor is a different object instance than a lymphocyte in the stroma, even if they inherit from the same class. SRT basically validates your spatial intuition with hard data.</p>
 <p><strong>The Unit Tests: Real World Applications</strong></p>
 <p>When you start digging into the papers, the applications are pretty wild. It’s not just about making pretty heatmaps; it’s about resolving “unknown unknowns” in pathology.</p>
 <ol type="1">
@@ -183,7 +189,7 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p>Dermatology is fascinating because it’s so visual. Take Mycosis Fungoides (a T-cell lymphoma). It looks almost identical to eczema under a standard scope. But SRT shows that the malignant T-cells are doing something very specific: they build a high-entropy, exclusionary “neighborhood” that benign cells don’t. Similarly, in wound healing, we can now distinguish between “scarring” fibroblasts deep in the dermis and “regenerating” fibroblasts on the surface. It’s identifying the specific lineage responsible for the bug.</p>
 <p><strong>The Bottom Line</strong></p>
-<p>If you’re a clinician looking to do serious research, this is the API you want to be using. It moves you from descriptive studies (“we saw these cells”) to mechanistic ones (“this structure causes this behavior”). It generates hypothesis-free data, meaning you can discover mechanisms you didn’t even know to look for. And frankly, it makes the grant writers happy because it’s cutting-edge tech applied to real human tissue. You don’t need to be a bioinformatician to run this; you just need to be the one who understands the clinical context to interpret the map.</p>
+<p>If you’re a clinician looking to do serious research, this is the method you want to be using. It moves you from descriptive studies (“we saw these cells/genes”) to mechanistic ones (“this structure causes this behavior”). It generates hypothesis-free data, meaning you can discover mechanisms you didn’t even know to look for. And frankly, it makes the grant writers happy because it’s cutting-edge tech applied to real human tissue. Sure, you will need some bioinformatics support to handle the computational pipeline, but you do not need to be a computational biologist to unlock the value of spatial transcriptomics. The heavy lifting happens behind the scenes; the real breakthrough comes from clinicians and researchers who know the biological questions and can interpret the spatial map.</p>
 <p><img src="transforming.png" class="img-fluid"></p>
 <p><strong>References</strong></p>
 <ol type="1">
@@ -252,13 +258,14 @@ ul.task-list li input[type="checkbox"] {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
