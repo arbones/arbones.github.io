@@ -12,3 +12,4 @@ newsletter/
 docs/CLAUDE.html
 **/*.quarto_ipynb
 __pycache__/
+digests/
