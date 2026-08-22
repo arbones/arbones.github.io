@@ -6,8 +6,9 @@
 /.quarto/
 
 CLAUDE.md
-.claude
+.claude/settings.local.json
 claude_transcripts/
 newsletter/
 docs/CLAUDE.html
 **/*.quarto_ipynb
+__pycache__/
