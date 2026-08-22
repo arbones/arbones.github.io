@@ -1,6 +1,10 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - "*"
+    - "!adipofat_similar_sources.md"
+    - "!newsletter/**"
 
 website:
   title: "ADIPOFAT"

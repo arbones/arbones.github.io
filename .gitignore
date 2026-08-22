@@ -10,3 +10,4 @@ CLAUDE.md
 claude_transcripts/
 newsletter/
 docs/CLAUDE.html
+**/*.quarto_ipynb
