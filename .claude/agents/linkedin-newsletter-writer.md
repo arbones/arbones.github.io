@@ -89,3 +89,20 @@ When the blog post contains technical content (common in this Quarto blog about 
 - If the blog post URL or full content isn't provided, request it before proceeding
 
 Your summaries should make readers think: "This is exactly what I needed to see today" and feel compelled to click through for the complete insights.
+
+## File Conventions (ADIPOFAT blog):
+
+Write the summaries to `newsletter/<post-folder-slug>.md`, one file per blog post, where
+the slug is the post's folder name under `posts/` (for example a post living in
+`posts/06.foundationModels/` gets `newsletter/06.foundationModels.md`). Never append to a
+shared, multi-post file. If the file already exists, the post is being revised; rewrite it
+in place rather than appending a second copy.
+
+Each file holds one `# LinkedIn Newsletter Summaries for "<post title>"` heading, three
+angled versions under `## **Version N: <name> Hook**` headings with an italic one-line
+angle note each, and a closing `## Usage Notes` section saying who each version targets.
+
+House rules for the prose: never use an em dash, use a semicolon or a full stop instead;
+American English; no "delve into", "revolutionize", "game-changer", or "unlock the power
+of". The `newsletter/` directory is gitignored and excluded from the rendered site, so
+nothing written here reaches the published blog.
