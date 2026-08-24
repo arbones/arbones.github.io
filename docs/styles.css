@@ -714,9 +714,15 @@ html {
   margin-top: var(--space-md);
 }
 
-/* Refined spacing for post content */
+/* Listing rows: keep the thumbnail level with the title.
+   The body used to carry a 6rem top margin, which dropped the title well below
+   the image; the image now centers against the title block instead. */
 .quarto-post .body {
-  margin-top: var(--space-2xl);
+  margin-top: 0;
+}
+
+.quarto-post .thumbnail {
+  align-self: center;
 }
 
 /* Clean category badges on individual posts */
