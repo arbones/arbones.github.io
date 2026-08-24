@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="JM">
+<meta name="dcterms.date" content="2026-08-24">
 
-<title>BLOG – ADIPOFAT</title>
+<title>The Foundation Model That Is Not Yet a Foundation – ADIPOFAT</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -29,25 +31,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-445b8638c3d06994fee0907d791121c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-445b8638c3d06994fee0907d791121c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -75,77 +75,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">ADIPOFAT</span>
     </a>
   </div>
@@ -156,7 +98,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
@@ -183,255 +125,123 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">BLOG</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">The Foundation Model That Is Not Yet a Foundation</h1>
+            <p class="subtitle lead">a component-by-component teardown of single-cell transformers, and why the baselines keep up</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SingleCell</div>
+                <div class="quarto-category">AI</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>JM </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 24, 2026</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="QUk=">AI <span class="quarto-category-count">(2)</span></div><div class="category" data-category="YmlvaW5mb3JtYXRpY3M=">bioinformatics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q2xhdWRl">Claude <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q2xpbmljYWwtQXBwbGljYXRpb25z">Clinical-Applications <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGF0YS13cmFuZ2xpbmc=">data-wrangling <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZXhjZWw=">excel <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R2l0SHVi">GitHub <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW50cm9kdWN0aW9u">introduction <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Tm9ybWFsaXphdGlvbg==">Normalization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="b21pY3M=">omics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UXVhcnRv">Quarto <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVwb3NpdG9yeQ==">Repository <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U2luZ2xlQ2VsbA==">SingleCell <span class="quarto-category-count">(3)</span></div><div class="category" data-category="U1JU">SRT <span class="quarto-category-count">(2)</span></div><div class="category" data-category="V3JpdGluZw==">Writing <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p>Someone in your group has already asked whether the lab should be fine-tuning scGPT instead of writing another Scanpy pipeline. It is a reasonable question. The pitch for single-cell foundation models is the pitch that worked for natural language: pre-train one large transformer on tens of millions of cells, adapt it to whatever comes next, and stop building a bespoke model for every task. The pitch has aged badly. Zero-shot evaluations found <strong>scGPT</strong> and <strong>Geneformer</strong> losing to simpler methods on tasks they were supposed to own (Kedzierska, Genome Biology, 2025), and five foundation models plus two other deep learning models failed to beat deliberately simple linear baselines at predicting perturbation responses (Ahlmann-Eltze, Nature Methods, 2025).</p>
+<p><em>What nobody could say was why</em>. Every published single-cell language model differs from every other in a dozen ways at once: how counts enter the model, what the reconstruction loss assumes about them, how inputs are corrupted, what the cell-level token is trained to do. When scGPT and Geneformer disagree on a benchmark, you cannot attribute the gap to any one of those decisions.</p>
+<p>De Waele and colleagues took the obvious next step and stopped benchmarking the products (De Waele, NAR Genomics and Bioinformatics, 2026). They reimplemented the design idiosyncrasies as interchangeable parts, then benchmarked the parts. The framework is on PyPI as <code>bento-sc</code>, which means the experiments are repeatable rather than merely reported.</p>
+<section id="one-knob-at-a-time-at-language-model-scale" class="level2">
+<h2 class="anchored" data-anchor-id="one-knob-at-a-time-at-language-model-scale">One knob at a time, at language model scale</h2>
+<p>The base design is an encoder-only bidirectional transformer with 51.9M learnable weights, pre-trained by masked language modeling. Only nonzero counts enter the model, capped at the 1024 highest-count genes per cell, with FlashAttention doing the heavy lifting. Pre-training runs on scTab (Fischer, Nature Communications, 2024), a reproducibly split CELLxGENE census of 22.2 million human cells and 19,331 protein-coding genes, of which 15.2M cells are training data. Every model gets 200,000 steps at a batch size of 384, which works out to 78.6 billion pre-training tokens, of which 11.8B actually carry training signal.</p>
+<p>Then the tuning. Four components get varied in sequence: the count embedding function, the reconstruction loss, the noising function, and the loss applied to the cell-level summary token. Within each round, every candidate is pre-trained from scratch and evaluated; the winner is carried into the next round. This is greedy hyperparameter optimization at a scale where nothing else is affordable, and it comes with the usual caveat, which the authors state plainly: interactions between components are never explored. A count encoding that loses under a cross-entropy loss might have won under a Poisson one.</p>
+<p>Evaluation is six downstream tasks, deliberately spread across the axes that matter: expression upscaling, gene regulatory network inference, post-perturbation expression prediction, cell-type identification, surface protein abundance prediction, and batch correction. Three run zero-shot on the frozen representations, three involve fine-tuning. Three read gene-level embeddings, three read the cell-level token. Scores are min-max scaled within each experiment before averaging, so a task with a naturally wide numeric range does not quietly dominate the ranking.</p>
+<p><img src="tuning.png" class="img-fluid"></p>
+</section>
+<section id="the-counts-want-to-be-left-alone" class="level2">
+<h2 class="anchored" data-anchor-id="the-counts-want-to-be-left-alone">The counts want to be left alone</h2>
+<p>The first round compares six ways of getting an expression value into the model. The base design bins counts the way scGPT does (Cui, Nature Methods, 2024), with bin edges placed so each holds at least 0.2% of counts. Note that exact equal-frequency binning is impossible here; a bin containing only counts of one would swallow roughly 57% of all counts in scTab. The alternatives are rank encoding in the style of Geneformer (Theodoris, Nature, 2023), raw counts, size-factor normalization, log1p, and size-factor normalization followed by log1p.</p>
+<p>Log1p and raw counts win. Binning follows closely. Size-factor normalization hurts. Rank encoding finishes last, and the authors check whether that is an artifact of asking a rank-encoded model to predict binned counts: they retrain it once with ranks at the output, and once masking gene identities and predicting which gene occupied a rank, which is close to Geneformer’s actual setup. Both alternatives perform worse than binned outputs.</p>
+<p>There is an echo here worth naming. Benchmarking four families of transformation on ordinary single-cell data, Ahlmann-Eltze and Huber found that the logarithm with a pseudocount followed by PCA matched or beat the theoretically appealing alternatives (Ahlmann-Eltze, Nature Methods, 2023). Different architecture, same result: the preprocessing that does least does best. The one addition that helped was pseudoquantization, a stabilization layer after the count embedding that keeps unusually large values from destabilizing training.</p>
+</section>
+<section id="loss-functions-that-know-what-a-count-is" class="level2">
+<h2 class="anchored" data-anchor-id="loss-functions-that-know-what-a-count-is">Loss functions that know what a count is</h2>
+<p>Round two changes what the model predicts and how it is scored, which amounts to changing the assumed count distribution. Predicting a bin under multiclass cross-entropy is the base. The alternatives predict scalars: raw counts under mean squared error, Poisson negative log-likelihood, or negative binomial negative log-likelihood, and log1p counts under mean squared error.</p>
+<p>Poisson wins by a small margin, with log1p plus MSE essentially tied behind it. So encoding what you know about count data into the loss pays, with one loud exception: negative binomial NLL is the worst of everything tested. The likely culprit is numerical. Because zeros are excluded from the input, both Poisson and negative binomial have to be modeled in zero-truncated form, and the truncated negative binomial likelihood is the fragile one. Worth noting that no prior single-cell transformer had tried Poisson NLL for pre-training, so the current best option in this round is one nobody had used.</p>
+</section>
+<section id="masking-survives-everything-thrown-at-it" class="level2">
+<h2 class="anchored" data-anchor-id="masking-survives-everything-thrown-at-it">Masking survives everything thrown at it</h2>
+<p>Round three attacks masking itself. Rates of 15%, 25%, and 50% are compared, along with three corruption schemes that are not masking at all: Gaussian noise added to log1p counts, resampling counts from a Poisson with the observed count as its mean, and molecular cross-validation, which splits each count into an input fraction and a target fraction. The last three share a structural advantage over masking; they provide training signal on every gene in the profile rather than only the masked subset.</p>
+<p>They lose anyway. Masking wins, and at 50%, the most aggressive rate tested. The detail that should make you uncomfortable is in the loss curves: reconstruction validation loss is essentially identical across all three masking rates. Hiding half the observed transcriptome costs the model nothing it can measure. Either expression profiles are redundant enough that the remaining genes fully determine the hidden ones, or the reconstruction task is too easy to be a useful proxy for anything downstream. Both readings are bad news for masked language modeling as a pre-training objective, and neither has been chased down.</p>
+</section>
+<section id="three-pre-training-tasks-beat-one" class="level2">
+<h2 class="anchored" data-anchor-id="three-pre-training-tasks-beat-one">Three pre-training tasks beat one</h2>
+<p>The last round questions masked language modeling entirely. Two alternatives operate on the cell summary token: contrastive learning, which masks the same cell twice and pulls the two views together while pushing other cells away, and plain supervised cell-type classification, which is available at scale because scTab is labeled. All combinations get tested, since none of the three losses exclude the others.</p>
+<p>Contrastive-only and supervised-only models are worse. The top three all include masked language modeling, and the best model uses all three losses at once. The complementarity is visible task by task. Only models that include supervised cell-type pre-training clear 0.70 on the scIB batch correction score, which makes sense given that separating cell types into clusters is part of what scIB measures. Without masked language modeling in the mix, the model cannot do zero-shot expression upscaling at all, because nothing ever taught it to produce a count.</p>
+<p>The rule the authors extract is that pre-training must carry signal relevant to every task you intend to run. Read that again in the context of the foundation model pitch, which is that pre-training generalizes to tasks you did not anticipate.</p>
+<p><img src="baselines.png" class="img-fluid"></p>
+</section>
+<section id="where-the-baselines-are-still-standing" class="level2">
+<h2 class="anchored" data-anchor-id="where-the-baselines-are-still-standing">Where the baselines are still standing</h2>
+<p>Test set results are where the argument lands. Each round’s winner is scored against the best baseline per task, with baselines drawn from current best practice and kept deliberately simple: principal component analysis, logistic regression, untrained transformers.</p>
+<p>Not every tuning round improved test performance. Tuning frequently bought a better average by sacrificing one task, and no single language model is best across all six. The final configuration is the best performer overall by both min-max scaled average and average rank, and it is never the worst on any task, which is the honest operational definition of a foundation model and the one thing the tuning clearly delivered.</p>
+<p>The baselines remain competitive on average. For cell-type identification and surface protein abundance prediction, every language model in the lineup beats the best baseline. For post-perturbation expression prediction and batch correction, the best baseline is virtually identical to the best language model. And the untuned base design, the one built from the average of published practice, loses to the baselines on average. All of these margins are narrow, which is exactly the point; the average ranks sit close together because nothing in this comparison separates cleanly.</p>
+<p>The authors put forward a specific hypothesis for the missing transfer. Pre-training happens on scTab, which is 10X data only. The downstream evaluations include CITE-seq and Perturb-seq. A model trained on scTab and evaluated on non-10X data has been shown to fall from roughly 0.8 macro F1 to roughly 0.4. From the model’s perspective, half the benchmark is out of distribution, and no amount of pre-training scale fixes a corpus that does not cover the manifold.</p>
+<p>Two closing experiments point at cheap wins. Raising the gene token cap from 1024 to 2048 produces small but consistent gains on precisely the tasks that need a detailed view of a cell: post-perturbation prediction, surface protein abundance, and network inference. And concatenating a learned embedding of the dataset and donor pair to the gene embeddings, then zeroing it at evaluation time, improves everything except cell-type identification, with the largest gain on batch correction. Both suggest the current designs are leaving performance on the table for reasons that have nothing to do with scale.</p>
+</section>
+<section id="what-to-do-with-this" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-do-with-this">What to do with this</h2>
+<p>If you are building one of these, the recipe is now written down. Feed log1p or raw counts and skip size-factor normalization. Put your distributional knowledge in the loss rather than the input, with Poisson as the current best option and negative binomial as the one to avoid under zero truncation. Mask, and mask hard. Combine pre-training objectives so that each downstream task family has something in the pre-training signal that speaks to it. Do not cap gene tokens tighter than your compute forces you to, and add a batch token.</p>
+<p>If you are consuming rather than building, the advice is shorter. Run the boring baseline first. PCA and logistic regression take minutes, and on four of six tasks here they were either ahead or level with a transformer that consumed 78.6 billion tokens.</p>
+<p><em>The design choices that improve a single-cell language model most are the ones that interfere with the counts least, and even the tuned best of them does not yet clear a well-chosen linear baseline by a margin that would change a conclusion you were going to draw.</em></p>
+<p>None of this makes single-cell transformers a dead end. It makes them an architecture in the phase where the interesting work is unglamorous: better pre-training corpora that span more than one chemistry, objectives whose difficulty scales with the model, and some account of what those attention maps over genes actually encode. The generational leap has not happened. It was announced early, which is a different thing.</p>
+<hr>
+</section>
+<section id="further-reading" class="level2">
+<h2 class="anchored" data-anchor-id="further-reading">Further Reading</h2>
+<p><strong>The study:</strong></p>
+<ul>
+<li>De Waele G, Menschaert G, Waegeman W. A systematic assessment of single-cell language model configurations. <em>NAR Genomics and Bioinformatics</em> 2026. https://doi.org/10.1093/nargab/lqag095</li>
+</ul>
+<p><strong>The models being taken apart:</strong></p>
+<ul>
+<li><p>Cui H, et al.&nbsp;scGPT: toward building a foundation model for single-cell multi-omics using generative AI. <em>Nature Methods</em> 2024. https://doi.org/10.1038/s41592-024-02201-0</p></li>
+<li><p>Theodoris CV, et al.&nbsp;Transfer learning enables predictions in network biology. <em>Nature</em> 2023. https://doi.org/10.1038/s41586-023-06139-9</p></li>
+</ul>
+<p><strong>The pre-training corpus:</strong></p>
+<ul>
+<li>Fischer F, et al.&nbsp;scTab: scaling cross-tissue single-cell annotation models. <em>Nature Communications</em> 2024. https://doi.org/10.1038/s41467-024-51059-5</li>
+</ul>
+<p><strong>On baselines that refuse to lose:</strong></p>
+<ul>
+<li><p>Kedzierska KZ, et al.&nbsp;Zero-shot evaluation reveals limitations of single-cell foundation models. <em>Genome Biology</em> 2025. https://doi.org/10.1186/s13059-025-03574-x</p></li>
+<li><p>Ahlmann-Eltze C, Huber W, Anders S. Deep-learning-based gene perturbation effect prediction does not yet outperform simple linear baselines. <em>Nature Methods</em> 2025. https://doi.org/10.1038/s41592-025-02772-6</p></li>
+<li><p>Ahlmann-Eltze C, Huber W. Comparison of transformations for single-cell RNA-seq data. <em>Nature Methods</em> 2023. https://doi.org/10.1038/s41592-023-01814-1</p></li>
+</ul>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="U2luZ2xlQ2VsbCUyQ0FJ" data-listing-date-sort="1787522400000" data-listing-file-modified-sort="1787574276893" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2011">
-<div class="thumbnail"><a href="./posts/06.foundationModels/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/06.foundationModels/thumbnail.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/06.foundationModels/index.html" class="no-external">The Foundation Model That Is Not Yet a Foundation</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/06.foundationModels/index.html" class="no-external">a component-by-component teardown of single-cell transformers, and why the baselines keep up</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U2luZ2xlQ2VsbA=='); return false;">SingleCell</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QUk='); return false;">AI</div>
-
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/06.foundationModels/index.html" class="no-external">
-<div class="listing-date">
-Aug 24, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="U1JUJTJDQ2xpbmljYWwtQXBwbGljYXRpb25z" data-listing-date-sort="1787349600000" data-listing-file-modified-sort="1787414667800" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="904">
-<div class="thumbnail"><a href="./posts/05.clinicalApplications/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/05.clinicalApplications/thumbnail.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/05.clinicalApplications/index.html" class="no-external">The Molecular Microscope: Spatially Resolved Transcriptomics (SRT) in Clinical Research</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/05.clinicalApplications/index.html" class="no-external">Transforming clinical research with Spatially Resolved Transcriptomics</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U1JU'); return false;">SRT</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2xpbmljYWwtQXBwbGljYXRpb25z'); return false;">Clinical-Applications</div>
-
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/05.clinicalApplications/index.html" class="no-external">
-<div class="listing-date">
-Aug 22, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="U2luZ2xlQ2VsbCUyQ1NSVCUyQ05vcm1hbGl6YXRpb24=" data-listing-date-sort="1767481200000" data-listing-file-modified-sort="1767570379694" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2040">
-<div class="thumbnail"><a href="./posts/04.Lying1/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/04.Lying1/thumbnail.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/04.Lying1/index.html" class="no-external">Why Your Spatial Transcriptomics Analysis Might Be Lying to You (I)</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/04.Lying1/index.html" class="no-external">A deep dive into normalization methods and why the tools we borrowed from single-cell RNA-seq don’t always work for spatial data</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U2luZ2xlQ2VsbA=='); return false;">SingleCell</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U1JU'); return false;">SRT</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Tm9ybWFsaXphdGlvbg=='); return false;">Normalization</div>
-
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/04.Lying1/index.html" class="no-external">
-<div class="listing-date">
-Jan 4, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Q2xhdWRlJTJDQUklMkNXcml0aW5nJTJDUXVhcnRv" data-listing-date-sort="1766185200000" data-listing-file-modified-sort="1766244048424" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1240">
-<div class="thumbnail"><a href="./posts/03.AIwriting/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/03.AIwriting/thumbnail.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/03.AIwriting/index.html" class="no-external">AI-Enhanced Scientific Writing</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/03.AIwriting/index.html" class="no-external">Transforming Quarto Analyses into Publication-Ready Narratives with Claude code</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2xhdWRl'); return false;">Claude</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QUk='); return false;">AI</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('V3JpdGluZw=='); return false;">Writing</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UXVhcnRv'); return false;">Quarto</div>
-
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/03.AIwriting/index.html" class="no-external">
-<div class="listing-date">
-Dec 20, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="U2luZ2xlQ2VsbCUyQ0dpdEh1YiUyQ1JlcG9zaXRvcnk=" data-listing-date-sort="1758578400000" data-listing-file-modified-sort="1758726302099" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="361">
-<div class="thumbnail"><a href="./posts/02.awesomeSC/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/02.awesomeSC/ChatGPT1.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/02.awesomeSC/index.html" class="no-external">Awesome-Single-Cell</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/02.awesomeSC/index.html" class="no-external">Navigating the Single-Cell Landscape: An Essential Community Resource</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U2luZ2xlQ2VsbA=='); return false;">SingleCell</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('R2l0SHVi'); return false;">GitHub</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVwb3NpdG9yeQ=='); return false;">Repository</div>
-
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/02.awesomeSC/index.html" class="no-external">
-<div class="listing-date">
-Sep 23, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="ZXhjZWwlMkNkYXRhLXdyYW5nbGluZw==" data-listing-date-sort="1758319200000" data-listing-file-modified-sort="1758642911355" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="516">
-<div class="thumbnail"><a href="./posts/01.excel/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/01.excel/thumbnail.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/01.excel/index.html" class="no-external">The Excel-pocalypse</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/01.excel/index.html" class="no-external">Where Good Research Goes to Die in a Spreadsheet</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZXhjZWw='); return false;">excel</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YS13cmFuZ2xpbmc='); return false;">data-wrangling</div>
-
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/01.excel/index.html" class="no-external">
-<div class="listing-date">
-Sep 20, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="b21pY3MlMkNiaW9pbmZvcm1hdGljcyUyQ2ludHJvZHVjdGlvbg==" data-listing-date-sort="1758146400000" data-listing-file-modified-sort="1758370583049" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="102">
-<div class="thumbnail"><a href="./posts/00.hello_world/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/00.hello_world/thumbnail.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/00.hello_world/index.html" class="no-external">Hello World…</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/00.hello_world/index.html" class="no-external">…from Omic Science!</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('b21pY3M='); return false;">omics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmlvaW5mb3JtYXRpY3M='); return false;">bioinformatics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('aW50cm9kdWN0aW9u'); return false;">introduction</div>
-
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/00.hello_world/index.html" class="no-external">
-<div class="listing-date">
-Sep 18, 2025
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
