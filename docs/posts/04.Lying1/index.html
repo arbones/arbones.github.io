@@ -200,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="spatial.png" class="img-fluid"></p>
 <p>Consider a Visium experiment profiling brain tissue. Cortical white matter has lower cell density and lower total RNA content than gray matter. This creates a spatial gradient in library size that corresponds to anatomical structure. If you apply standard LogNormalize, you’re implicitly treating this gradient as technical noise and normalizing it away. But the gradient is biology. Different brain regions have different cellular compositions and different transcriptional programs.</p>
 <p>This problem becomes even more acute with subcellular resolution platforms like Xenium or CosMx. Individual cells have spatial organization of organelles, transcripts localize to specific subcellular compartments, and RNA abundance varies systematically across cellular domains. Normalizing by cell-level totals can obscure these patterns.</p>
-<p>Recent work from Svensson and colleagues demonstrated this problem empirically. They showed that applying standard single-cell normalization methods to spatial data can reduce performance in spatial domain identification tasks. In some datasets, unnormalized or minimally normalized data (just log transformation) outperformed aggressively normalized data for identifying anatomical regions.</p>
+<p>Recent work from Atta demonstrated this problem empirically. They showed that applying standard single-cell normalization methods to spatial data can reduce performance in spatial domain identification tasks. In some datasets, unnormalized or minimally normalized data (just log transformation) outperformed aggressively normalized data for identifying anatomical regions.</p>
 <p>The issue is that we borrowed tools designed for one problem (technical variation in dissociated single cells) and applied them to a different problem (spatial biology where location matters). The assumptions don’t transfer cleanly.</p>
 </section>
 <section id="practical-recommendations-what-to-actually-do" class="level2">
@@ -243,9 +243,9 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Lun ATL, et al.&nbsp;Pooling across cells to normalize single-cell RNA sequencing data with many zero counts. <em>Genome Biology</em> 2016. https://doi.org/10.1186/s13059-016-0947-7</li>
 </ul>
-<p><strong>On spatial-specific challenges:</strong> - Svensson V, et al.&nbsp;(References to SpaNorm and spatial normalization challenges from the original report)</p>
-<p><strong>On deep learning approaches:</strong> - Lopez R, et al.&nbsp;Deep generative modeling for single-cell transcriptomics. <em>Nature Methods</em> 2018. https://doi.org/10.1038/s41592-018-0229-2</p>
-<p><strong>On benchmarking:</strong> - Brown J, et al.&nbsp;Normalization by distributional resampling of high throughput single-cell RNA-sequencing data. <em>Bioinformatics</em> 2021. https://doi.org/10.1093/bioinformatics/btab450 - Marco-Salas S, et al.&nbsp;Optimizing Xenium In Situ data utility by quality assessment and best-practice analysis workflows. <strong>Nature Methods</strong> 2025. https://doi.org/10.1038/s41592-025-02617-2</p>
+<p><strong>On spatial-specific challenges:</strong> - Atta L, <em>et al</em>. Gene count normalization in single-cell imaging-based spatially resolved transcriptomics. <em>Genome Biol</em> 25, 153 (2024). https://doi.org/10.1186/s13059-024-03303-w</p>
+<p><strong>On deep learning approaches:</strong> - Lopez R, <em>et al</em>. Deep generative modeling for single-cell transcriptomics. <em>Nature Methods</em> 2018. https://doi.org/10.1038/s41592-018-0229-2</p>
+<p><strong>On benchmarking:</strong> - Brown J, <em>et al</em>. Normalization by distributional resampling of high throughput single-cell RNA-sequencing data. <em>Bioinformatics</em> 2021. https://doi.org/10.1093/bioinformatics/btab450 - Marco-Salas S, <em>et al</em>. Optimizing Xenium In Situ data utility by quality assessment and best-practice analysis workflows. Nature Methods 2025. https://doi.org/10.1038/s41592-025-02617-2</p>
 
 
 </section>

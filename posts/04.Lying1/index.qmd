@@ -10,7 +10,7 @@ categories: [SingleCell,SRT,Normalization]
 
 So here's the thing about analyzing gene expression data. You load up your Xenium or Visium dataset, you run the standard Seurat or SpatialData pipelines because that's what everyone does, you get your clusters, and you write your paper. Great. Except maybe not great, because it turns out that the normalization step you copied from the single-cell RNA-seq tutorial might be quietly removing the very biological signal you're trying to find.
 
-This isn't hypothetical hand-waving. Data from recent benchmarking studies tells a pretty clear story. _When you apply standard single-cell normalization methods to spatial transcriptomics data, especially in tissues with anatomically structured variation in cell density or RNA content, you can inadvertently erase genuine biology_. The cortical white matter doesn't have uniform cell packing. The liver lobule has zones with different metabolic activities and different RNA abundances. These regional differences aren't technical noise, they're the biology. But if you normalize them away, they're gone.
+This isn't hypothetical hand-waving. Data from recent benchmarking studies tells a pretty clear story. *When you apply standard single-cell normalization methods to spatial transcriptomics data, especially in tissues with anatomically structured variation in cell density or RNA content, you can inadvertently erase genuine biology*. The cortical white matter doesn't have uniform cell packing. The liver lobule has zones with different metabolic activities and different RNA abundances. These regional differences aren't technical noise, they're the biology. But if you normalize them away, they're gone.
 
 Let's unpack how we got here and what we can do about it.
 
@@ -58,7 +58,7 @@ Consider a Visium experiment profiling brain tissue. Cortical white matter has l
 
 This problem becomes even more acute with subcellular resolution platforms like Xenium or CosMx. Individual cells have spatial organization of organelles, transcripts localize to specific subcellular compartments, and RNA abundance varies systematically across cellular domains. Normalizing by cell-level totals can obscure these patterns.
 
-Recent work from Svensson and colleagues demonstrated this problem empirically. They showed that applying standard single-cell normalization methods to spatial data can reduce performance in spatial domain identification tasks. In some datasets, unnormalized or minimally normalized data (just log transformation) outperformed aggressively normalized data for identifying anatomical regions.
+Recent work from Atta demonstrated this problem empirically. They showed that applying standard single-cell normalization methods to spatial data can reduce performance in spatial domain identification tasks. In some datasets, unnormalized or minimally normalized data (just log transformation) outperformed aggressively normalized data for identifying anatomical regions.
 
 The issue is that we borrowed tools designed for one problem (technical variation in dissociated single cells) and applied them to a different problem (spatial biology where location matters). The assumptions don't transfer cleanly.
 
@@ -118,10 +118,10 @@ For those who want to dive deeper into the technical details, the key references
 
 **On standard normalization methods:** - Hafemeister C, Satija R. Normalization and variance stabilization of single-cell RNA-seq data using regularized negative binomial regression. *Genome Biology* 2019. https://doi.org/10.1186/s13059-019-1874-1
 
--   Lun ATL, et al. Pooling across cells to normalize single-cell RNA sequencing data with many zero counts. *Genome Biology* 2016. https://doi.org/10.1186/s13059-016-0947-7
+- Lun ATL, et al. Pooling across cells to normalize single-cell RNA sequencing data with many zero counts. *Genome Biology* 2016. https://doi.org/10.1186/s13059-016-0947-7
 
-**On spatial-specific challenges:** - Svensson V, et al. (References to SpaNorm and spatial normalization challenges from the original report)
+**On spatial-specific challenges:** - Atta L, *et al*. Gene count normalization in single-cell imaging-based spatially resolved transcriptomics. *Genome Biol* 25, 153 (2024). https://doi.org/10.1186/s13059-024-03303-w
 
-**On deep learning approaches:** - Lopez R, et al. Deep generative modeling for single-cell transcriptomics. *Nature Methods* 2018. https://doi.org/10.1038/s41592-018-0229-2
+**On deep learning approaches:** - Lopez R, *et al*. Deep generative modeling for single-cell transcriptomics. *Nature Methods* 2018. https://doi.org/10.1038/s41592-018-0229-2
 
-**On benchmarking:** - Brown J, et al. Normalization by distributional resampling of high throughput single-cell RNA-sequencing data. *Bioinformatics* 2021. https://doi.org/10.1093/bioinformatics/btab450 - Marco-Salas S, et al. Optimizing Xenium In Situ data utility by quality assessment and best-practice analysis workflows. **Nature Methods** 2025. https://doi.org/10.1038/s41592-025-02617-2
+**On benchmarking:** - Brown J, *et al*. Normalization by distributional resampling of high throughput single-cell RNA-sequencing data. *Bioinformatics* 2021. https://doi.org/10.1093/bioinformatics/btab450 - Marco-Salas S, *et al*. Optimizing Xenium In Situ data utility by quality assessment and best-practice analysis workflows. Nature Methods 2025. https://doi.org/10.1038/s41592-025-02617-2
