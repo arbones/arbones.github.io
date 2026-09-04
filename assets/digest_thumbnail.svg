@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2816" height="1536" viewBox="0 0 2816 1536">
+<rect width="2816" height="1536" fill="#fdfdfa"/>
+<g stroke="#eceeea" stroke-width="3">
+<line x1="640" y1="380" x2="640" y2="1200"/>
+<line x1="830" y1="380" x2="830" y2="1200"/>
+<line x1="1020" y1="380" x2="1020" y2="1200"/>
+<line x1="1210" y1="380" x2="1210" y2="1200"/>
+<line x1="1400" y1="380" x2="1400" y2="1200"/>
+<line x1="1590" y1="380" x2="1590" y2="1200"/>
+<line x1="1780" y1="380" x2="1780" y2="1200"/>
+<line x1="1970" y1="380" x2="1970" y2="1200"/>
+<line x1="2160" y1="380" x2="2160" y2="1200"/>
+<line x1="2350" y1="380" x2="2350" y2="1200"/>
+<line x1="640" y1="380" x2="2480" y2="380"/>
+<line x1="640" y1="570" x2="2480" y2="570"/>
+<line x1="640" y1="760" x2="2480" y2="760"/>
+<line x1="640" y1="950" x2="2480" y2="950"/>
+<line x1="640" y1="1140" x2="2480" y2="1140"/>
+</g>
+<text x="1408" y="188" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="146" font-weight="normal" fill="#15262d">ADIPOFAT Source Digest</text>
+<text x="1408" y="292" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="80" font-weight="normal" fill="#2c3b45">The week in omics, spatial biology and data science</text>
+<rect x="300" y="545" width="980" height="620" rx="22" fill="#ffffff" stroke="#212a31" stroke-width="8"/>
+<rect x="300" y="545" width="980" height="62" rx="22" fill="#e6eaec" stroke="#212a31" stroke-width="8"/>
+<rect x="308" y="585" width="964" height="26" fill="#ffffff"/>
+<line x1="300" y1="607" x2="1280" y2="607" stroke="#212a31" stroke-width="8"/>
+<circle cx="638" cy="740" r="17" fill="#d5dbdb"/>
+<circle cx="920" cy="706" r="17" fill="#4d85b4"/>
+<circle cx="821" cy="833" r="17" fill="#d5dbdb"/>
+<circle cx="408" cy="894" r="17" fill="#73b87f"/>
+<circle cx="418" cy="714" r="17" fill="#d5dbdb"/>
+<circle cx="725" cy="1032" r="17" fill="#d5dbdb"/>
+<circle cx="465" cy="771" r="17" fill="#4d85b4"/>
+<circle cx="900" cy="1084" r="17" fill="#d5dbdb"/>
+<circle cx="1201" cy="695" r="17" fill="#73b87f"/>
+<circle cx="1100" cy="800" r="17" fill="#d5dbdb"/>
+<circle cx="483" cy="726" r="17" fill="#d5dbdb"/>
+<circle cx="625" cy="1028" r="17" fill="#4d85b4"/>
+<circle cx="514" cy="926" r="17" fill="#d5dbdb"/>
+<circle cx="910" cy="836" r="17" fill="#73b87f"/>
+<circle cx="831" cy="702" r="17" fill="#d5dbdb"/>
+<circle cx="409" cy="764" r="17" fill="#d5dbdb"/>
+<circle cx="629" cy="928" r="17" fill="#4d85b4"/>
+<circle cx="750" cy="804" r="17" fill="#d5dbdb"/>
+<circle cx="1044" cy="977" r="17" fill="#73b87f"/>
+<circle cx="569" cy="923" r="17" fill="#d5dbdb"/>
+<circle cx="812" cy="1053" r="17" fill="#d5dbdb"/>
+<circle cx="988" cy="799" r="17" fill="#4d85b4"/>
+<circle cx="489" cy="886" r="17" fill="#d5dbdb"/>
+<circle cx="392" cy="964" r="17" fill="#73b87f"/>
+<circle cx="1019" cy="923" r="17" fill="#d5dbdb"/>
+<circle cx="959" cy="932" r="17" fill="#d5dbdb"/>
+<circle cx="859" cy="872" r="17" fill="#4d85b4"/>
+<circle cx="1084" cy="1083" r="17" fill="#d5dbdb"/>
+<circle cx="768" cy="962" r="17" fill="#73b87f"/>
+<circle cx="691" cy="964" r="17" fill="#d5dbdb"/>
+<circle cx="409" cy="1007" r="17" fill="#d5dbdb"/>
+<circle cx="599" cy="854" r="17" fill="#4d85b4"/>
+<circle cx="668" cy="1057" r="17" fill="#d5dbdb"/>
+<circle cx="1185" cy="740" r="17" fill="#73b87f"/>
+<circle cx="867" cy="789" r="17" fill="#d5dbdb"/>
+<circle cx="362" cy="856" r="17" fill="#d5dbdb"/>
+<circle cx="677" cy="920" r="17" fill="#4d85b4"/>
+<circle cx="1181" cy="973" r="17" fill="#d5dbdb"/>
+<circle cx="1135" cy="1012" r="17" fill="#73b87f"/>
+<circle cx="697" cy="847" r="17" fill="#d5dbdb"/>
+<circle cx="447" cy="949" r="17" fill="#d5dbdb"/>
+<circle cx="538" cy="745" r="17" fill="#4d85b4"/>
+<circle cx="358" cy="740" r="17" fill="#d5dbdb"/>
+<circle cx="446" cy="832" r="17" fill="#73b87f"/>
+<circle cx="380" cy="1053" r="17" fill="#d5dbdb"/>
+<circle cx="761" cy="884" r="17" fill="#d5dbdb"/>
+<circle cx="654" cy="789" r="17" fill="#4d85b4"/>
+<circle cx="1074" cy="745" r="17" fill="#d5dbdb"/>
+<circle cx="1104" cy="976" r="17" fill="#73b87f"/>
+<circle cx="502" cy="1008" r="17" fill="#d5dbdb"/>
+<circle cx="665" cy="688" r="17" fill="#d5dbdb"/>
+<circle cx="582" cy="974" r="17" fill="#4d85b4"/>
+<circle cx="1184" cy="868" r="17" fill="#d5dbdb"/>
+<circle cx="1168" cy="1102" r="17" fill="#73b87f"/>
+<circle cx="1084" cy="882" r="17" fill="#d5dbdb"/>
+<circle cx="922" cy="1020" r="17" fill="#d5dbdb"/>
+<circle cx="984" cy="748" r="17" fill="#4d85b4"/>
+<circle cx="471" cy="681" r="17" fill="#d5dbdb"/>
+<circle cx="576" cy="802" r="17" fill="#73b87f"/>
+<circle cx="471" cy="1068" r="17" fill="#d5dbdb"/>
+<circle cx="738" cy="754" r="17" fill="#d5dbdb"/>
+<circle cx="838" cy="1014" r="17" fill="#4d85b4"/>
+<circle cx="771" cy="1082" r="17" fill="#d5dbdb"/>
+<circle cx="962" cy="1054" r="17" fill="#73b87f"/>
+<circle cx="1172" cy="787" r="17" fill="#d5dbdb"/>
+<circle cx="1035" cy="1063" r="17" fill="#d5dbdb"/>
+<circle cx="548" cy="1086" r="17" fill="#4d85b4"/>
+<circle cx="1213" cy="1035" r="17" fill="#d5dbdb"/>
+<circle cx="527" cy="813" r="17" fill="#73b87f"/>
+<circle cx="982" cy="683" r="17" fill="#d5dbdb"/>
+<circle cx="414" cy="1101" r="17" fill="#d5dbdb"/>
+<circle cx="592" cy="731" r="17" fill="#4d85b4"/>
+<circle cx="953" cy="859" r="17" fill="#d5dbdb"/>
+<circle cx="813" cy="778" r="17" fill="#73b87f"/>
+<circle cx="574" cy="682" r="17" fill="#d5dbdb"/>
+<circle cx="952" cy="1099" r="17" fill="#d5dbdb"/>
+<circle cx="362" cy="789" r="17" fill="#4d85b4"/>
+<circle cx="841" cy="946" r="17" fill="#d5dbdb"/>
+<circle cx="899" cy="969" r="17" fill="#73b87f"/>
+<circle cx="781" cy="676" r="17" fill="#d5dbdb"/>
+<circle cx="942" cy="801" r="17" fill="#d5dbdb"/>
+<circle cx="1130" cy="761" r="17" fill="#4d85b4"/>
+<circle cx="360" cy="999" r="17" fill="#d5dbdb"/>
+<circle cx="1221" cy="930" r="17" fill="#73b87f"/>
+<circle cx="605" cy="1079" r="17" fill="#d5dbdb"/>
+<circle cx="1171" cy="912" r="17" fill="#d5dbdb"/>
+<circle cx="1006" cy="853" r="17" fill="#4d85b4"/>
+<circle cx="1112" cy="684" r="17" fill="#d5dbdb"/>
+<circle cx="1132" cy="879" r="17" fill="#73b87f"/>
+<circle cx="877" cy="680" r="17" fill="#d5dbdb"/>
+<circle cx="650" cy="857" r="17" fill="#d5dbdb"/>
+<circle cx="551" cy="855" r="17" fill="#4d85b4"/>
+<circle cx="1034" cy="709" r="17" fill="#d5dbdb"/>
+<circle cx="700" cy="1104" r="17" fill="#73b87f"/>
+<circle cx="992" cy="1011" r="17" fill="#d5dbdb"/>
+<circle cx="859" cy="1056" r="17" fill="#d5dbdb"/>
+<path d="M 1400 797.0 L 1680 797.0 L 1680 725.0 L 1810 855.0 L 1680 985.0 L 1680 913.0 L 1400 913.0 Z" fill="#e6eaec" stroke="#212a31" stroke-width="8" stroke-linejoin="round"/>
+<text x="1605" y="1085" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="56" font-weight="normal" fill="#2c3b45">READ AND SIFT</text>
+<rect x="1980" y="545" width="540" height="620" rx="22" fill="#eef5ef" stroke="#73b87f" stroke-width="8"/>
+<circle cx="2131" cy="694" r="34" fill="#4d85b4"/>
+<line x1="2193.2" y1="681.8" x2="2249.2" y2="681.8" stroke="#d5dbdb" stroke-width="14" stroke-linecap="round"/>
+<line x1="2193.2" y1="715.8" x2="2223.2" y2="715.8" stroke="#d5dbdb" stroke-width="14" stroke-linecap="round"/>
+<circle cx="2326" cy="774" r="34" fill="#73b87f"/>
+<line x1="2387.6" y1="762.4" x2="2443.6" y2="762.4" stroke="#d5dbdb" stroke-width="14" stroke-linecap="round"/>
+<line x1="2387.6" y1="796.4" x2="2417.6" y2="796.4" stroke="#d5dbdb" stroke-width="14" stroke-linecap="round"/>
+<circle cx="2131" cy="892" r="34" fill="#73b87f"/>
+<line x1="2193.2" y1="880.2" x2="2249.2" y2="880.2" stroke="#d5dbdb" stroke-width="14" stroke-linecap="round"/>
+<line x1="2193.2" y1="914.2" x2="2223.2" y2="914.2" stroke="#d5dbdb" stroke-width="14" stroke-linecap="round"/>
+<circle cx="2326" cy="973" r="34" fill="#4d85b4"/>
+<line x1="2387.6" y1="960.8" x2="2443.6" y2="960.8" stroke="#d5dbdb" stroke-width="14" stroke-linecap="round"/>
+<line x1="2387.6" y1="994.8" x2="2417.6" y2="994.8" stroke="#d5dbdb" stroke-width="14" stroke-linecap="round"/>
+<circle cx="2131" cy="1091" r="34" fill="#d5dbdb"/>
+<line x1="2193.2" y1="1078.6" x2="2249.2" y2="1078.6" stroke="#d5dbdb" stroke-width="14" stroke-linecap="round"/>
+<line x1="2193.2" y1="1112.6" x2="2223.2" y2="1112.6" stroke="#d5dbdb" stroke-width="14" stroke-linecap="round"/>
+<text x="790" y="1330" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="66" font-weight="bold" fill="#15262d">THE FULL SWEEP</text>
+<text x="790" y="1424" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="60" font-weight="normal" fill="#2c3b45">journals, preprints, blogs</text>
+<text x="2250" y="1330" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="66" font-weight="bold" fill="#15262d">THE DIGEST</text>
+<text x="2250" y="1424" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="60" font-weight="normal" fill="#2c3b45">what earned your time</text>
+</svg>

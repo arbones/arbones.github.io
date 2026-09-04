@@ -6,6 +6,7 @@ project:
     - "!adipofat_similar_sources.md"
     - "!newsletter/**"
     - "!digests/**"
+    - "!assets/**"
 
 website:
   title: "ADIPOFAT"
