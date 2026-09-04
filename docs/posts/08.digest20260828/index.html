@@ -180,7 +180,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Jieran Sun and colleagues, with Naveed Ishaque as senior author, show that existing benchmarks of spatially aware clustering are narrow and poorly grounded. They are dominated by Visium and brain tissue, and they treat manual anatomical annotation as truth when those labels carry known bias.</p>
 <p>The authors release SACCELERATOR, an extensible framework that standardises data formatting, method integration and metric evaluation, and use it to demonstrate poor generalisability across methods. Rather than publish another ranking they propose a consensus workflow that uses spatial entropy to flag regions where methods disagree and routes only those to expert review. A companion Research Briefing, <a href="https://doi.org/10.1038/s41592-026-03193-9">“Benchmark pitfalls expose need for expert-guided spatial clustering”</a>, appeared the same day.</p>
 <p><img src="saccelerator.jpg" class="img-fluid"></p>
-<p>Why it matters: this is the strongest available argument that a reader should stop asking which spatial clustering method wins and start asking where the methods disagree, which is a post ADIPOFAT is well placed to write.</p>
+<p>Why it matters: this is the strongest available argument that a reader should stop asking which spatial clustering method wins and start asking where the methods disagree.</p>
 </section>
 <section id="clear-st-physics-informed-probabilistic-decontamination-of-spatial-transcriptomics-by-modeling-mrna-lateral-diffusion" class="level3">
 <h3 class="anchored" data-anchor-id="clear-st-physics-informed-probabilistic-decontamination-of-spatial-transcriptomics-by-modeling-mrna-lateral-diffusion"><a href="https://www.biorxiv.org/content/10.64898/2026.08.13.744615v1">CLEAR-ST: Physics-informed probabilistic decontamination of spatial transcriptomics by modeling mRNA lateral diffusion</a></h3>
@@ -199,7 +199,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="benchmarking-the-robustness-of-segmentation-models-to-corruptions-in-biological-imaging"><a href="https://www.biorxiv.org/content/10.64898/2026.08.21.746302v1">Benchmarking the robustness of segmentation models to corruptions in biological imaging</a></h3>
 <p>Source: <a href="https://www.biorxiv.org/">bioRxiv</a></p>
 <p>Y. Kesenci, L. Le Folgoc and E. Angelini simulate 36 corruption types at varying severity across images from 30 datasets, then measure how deep learning segmentation models degrade. Clean-image performance does not predict robustness. StarDist, a method roughly a decade old, proves more robust than several newer foundation-model competitors. A representation analysis locates the failure in the early layers of the encoder rather than in the decoder or the head.</p>
-<p>Why it matters: segmentation error propagates into every downstream cell-level statistic in Xenium and CosMx work, so a benchmark showing that the newest model is not the safest choice speaks directly to ADIPOFAT’s imaging-based spatial readers.</p>
+<p>Why it matters: segmentation error propagates into every downstream cell-level statistic in Xenium and CosMx work, so a benchmark showing that the newest model is not the safest choice speaks directly to all imaging-based spatial users.</p>
 </section>
 <section id="spider-improves-spatial-transcriptomics-data-using-single-cell-rna-sequencing" class="level3">
 <h3 class="anchored" data-anchor-id="spider-improves-spatial-transcriptomics-data-using-single-cell-rna-sequencing"><a href="https://www.rna-seqblog.com/spider-improves-spatial-transcriptomics-data-using-single-cell-rna-sequencing/">SPIDER improves spatial transcriptomics data using single-cell RNA sequencing</a></h3>
@@ -254,23 +254,15 @@ ul.task-list li input[type="checkbox"] {
 <p>Why it matters: dropping the cell-matching requirement removes the step that usually breaks when transcriptomic and proteomic assays come from serial sections rather than the same cells.</p>
 </section>
 </section>
-<section id="commentary-and-community" class="level2">
-<h2 class="anchored" data-anchor-id="commentary-and-community">Commentary and community</h2>
+<section id="commentary" class="level2">
+<h2 class="anchored" data-anchor-id="commentary">Commentary</h2>
 <section id="will-ai-cure-all-disease-in-10-years" class="level3">
 <h3 class="anchored" data-anchor-id="will-ai-cure-all-disease-in-10-years"><a href="https://www.youtube.com/watch?v=ukZvIjq2oJc">Will AI cure all disease in 10 years?</a></h3>
 <p>Source: <a href="https://www.youtube.com/channel/UCG4kmWK8UyzfenZ60xVBapw">OMGenomics</a></p>
-<p>Posted 27 August, this sets industry claims about eliminating disease within a decade against how drug development actually works. The argument is historical, walking through Nixon’s 1971 War on Cancer, the IBM Watson oncology partnership at MD Anderson from 2013 and its shelving in 2017, and Microsoft’s 2016 claim that it would solve cancer in ten years. Contemporary sources include an August 2026 post by Dario Amodei, Demis Hassabis on 60 Minutes in April 2025, and an August 2026 Eric Topol post. It is commentary, not a tutorial.</p>
-</section>
-<section id="weekly-reads-170826" class="level3">
-<h3 class="anchored" data-anchor-id="weekly-reads-170826"><a href="https://behindthebioinformatics.substack.com/p/weekly-reads-170826">Weekly reads 17/08/26</a></h3>
-<p>Source: <a href="https://behindthebioinformatics.substack.com/">Behind the Bioinformatics, Sebastiaan Vanuytven</a></p>
-<p>Published 23 August despite the date in the title, which refers to the week covered. The lead item is Simkin and colleagues in Nature Genetics, who used Visium across 26 head and neck squamous cell carcinoma tumours to identify 16 metaprograms and two spatially distinct modes of partial epithelial-to-mesenchymal transition, a fibroblast and TGF beta driven edge and a myeloid and oncostatin M driven core, validated with Visium HD, tissue microarrays and CODEX. The issue also covers TERRA, a foundation model pretrained on 112 million cells for zero-shot spatial analysis, and SpaMTP for spatial metabolomics integration. Vanuytven states the limits of the head and neck study plainly, that it is observational and that Visium resolution runs at a median near 15 cells per spot.</p>
-</section>
-</section>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
+<p>Posted on 27 August, this video examines recent claims that AI could eliminate most disease within the next decade and compares them with the realities of drug development. It takes a historical perspective, revisiting Nixon’s 1971 War on Cancer, the IBM Watson–MD Anderson oncology partnership launched in 2013 and shelved in 2017, and Microsoft’s 2016 prediction that cancer could be solved within ten years. It then contrasts these earlier promises with more recent statements from Dario Amodei in August 2026, Demis Hassabis on <em>60 Minutes</em> in April 2025, and Eric Topol in August 2026. The video is primarily commentary and critical analysis rather than a technical tutorial.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

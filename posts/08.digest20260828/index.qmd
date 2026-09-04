@@ -24,7 +24,7 @@ The authors release SACCELERATOR, an extensible framework that standardises data
 
 ![](saccelerator.jpg)
 
-Why it matters: this is the strongest available argument that a reader should stop asking which spatial clustering method wins and start asking where the methods disagree, which is a post ADIPOFAT is well placed to write.
+Why it matters: this is the strongest available argument that a reader should stop asking which spatial clustering method wins and start asking where the methods disagree.
 
 ### [CLEAR-ST: Physics-informed probabilistic decontamination of spatial transcriptomics by modeling mRNA lateral diffusion](https://www.biorxiv.org/content/10.64898/2026.08.13.744615v1)
 
@@ -50,7 +50,7 @@ Source: [bioRxiv](https://www.biorxiv.org/)
 
 Y. Kesenci, L. Le Folgoc and E. Angelini simulate 36 corruption types at varying severity across images from 30 datasets, then measure how deep learning segmentation models degrade. Clean-image performance does not predict robustness. StarDist, a method roughly a decade old, proves more robust than several newer foundation-model competitors. A representation analysis locates the failure in the early layers of the encoder rather than in the decoder or the head.
 
-Why it matters: segmentation error propagates into every downstream cell-level statistic in Xenium and CosMx work, so a benchmark showing that the newest model is not the safest choice speaks directly to ADIPOFAT's imaging-based spatial readers.
+Why it matters: segmentation error propagates into every downstream cell-level statistic in Xenium and CosMx work, so a benchmark showing that the newest model is not the safest choice speaks directly to all imaging-based spatial users.
 
 ### [SPIDER improves spatial transcriptomics data using single-cell RNA sequencing](https://www.rna-seqblog.com/spider-improves-spatial-transcriptomics-data-using-single-cell-rna-sequencing/)
 
@@ -120,18 +120,10 @@ ARCADIA, from Columbia University, integrates single-cell RNA sequencing with sp
 
 Why it matters: dropping the cell-matching requirement removes the step that usually breaks when transcriptomic and proteomic assays come from serial sections rather than the same cells.
 
-## Commentary and community
+## Commentary 
 
 ### [Will AI cure all disease in 10 years?](https://www.youtube.com/watch?v=ukZvIjq2oJc)
 
 Source: [OMGenomics](https://www.youtube.com/channel/UCG4kmWK8UyzfenZ60xVBapw)
 
-Posted 27 August, this sets industry claims about eliminating disease within a decade against how drug development actually works. The argument is historical, walking through Nixon's 1971 War on Cancer, the IBM Watson oncology partnership at MD Anderson from 2013 and its shelving in 2017, and Microsoft's 2016 claim that it would solve cancer in ten years. Contemporary sources include an August 2026 post by Dario Amodei, Demis Hassabis on 60 Minutes in April 2025, and an August 2026 Eric Topol post. It is commentary, not a tutorial.
-
-### [Weekly reads 17/08/26](https://behindthebioinformatics.substack.com/p/weekly-reads-170826)
-
-Source: [Behind the Bioinformatics, Sebastiaan Vanuytven](https://behindthebioinformatics.substack.com/)
-
-Published 23 August despite the date in the title, which refers to the week covered. The lead item is Simkin and colleagues in Nature Genetics, who used Visium across 26 head and neck squamous cell carcinoma tumours to identify 16 metaprograms and two spatially distinct modes of partial epithelial-to-mesenchymal transition, a fibroblast and TGF beta driven edge and a myeloid and oncostatin M driven core, validated with Visium HD, tissue microarrays and CODEX. The issue also covers TERRA, a foundation model pretrained on 112 million cells for zero-shot spatial analysis, and SpaMTP for spatial metabolomics integration. Vanuytven states the limits of the head and neck study plainly, that it is observational and that Visium resolution runs at a median near 15 cells per spot.
-
-##
+Posted on 27 August, this video examines recent claims that AI could eliminate most disease within the next decade and compares them with the realities of drug development. It takes a historical perspective, revisiting Nixon's 1971 War on Cancer, the IBM Watson–MD Anderson oncology partnership launched in 2013 and shelved in 2017, and Microsoft's 2016 prediction that cancer could be solved within ten years. It then contrasts these earlier promises with more recent statements from Dario Amodei in August 2026, Demis Hassabis on *60 Minutes* in April 2025, and Eric Topol in August 2026. The video is primarily commentary and critical analysis rather than a technical tutorial.
